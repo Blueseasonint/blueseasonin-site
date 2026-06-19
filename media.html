@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media & Recognition | Blue Season International Ltd.</title>
+  <meta name="description" content="Selected media coverage and publications featuring Guy Koubbi and Blue Season International Ltd." />
+  <meta name="keywords" content="Guy Koubbi, גיא קובי, Blue Season International, media, Globes, Ynet, alternative investments, whisky casks" />
+  <style>
+    :root {
+      --navy: #081f3d;
+      --navy-2: #102f57;
+      --gold: #c8a45d;
+      --text: #18212f;
+      --muted: #667085;
+      --bg: #f5f7fb;
+      --white: #ffffff;
+      --border: #e4e9f2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .nav a {
+      color: rgba(255,255,255,0.86);
+      text-decoration: none;
+    }
+
+    .nav a:hover { color: var(--gold); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: var(--white);
+      padding: 82px 6% 70px;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 19px;
+      color: rgba(255,255,255,0.83);
+      margin: 0;
+    }
+
+    .container {
+      width: min(1120px, 88%);
+      margin: 0 auto;
+      padding: 56px 0 76px;
+    }
+
+    .intro-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 18px 46px rgba(15, 35, 65, 0.08);
+      margin-bottom: 34px;
+    }
+
+    .intro-card h2 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 28px;
+    }
+
+    .intro-card p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 900px;
+    }
+
+    .section-title {
+      margin: 46px 0 20px;
+      color: var(--navy);
+      font-size: 30px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 16px 40px rgba(15, 35, 65, 0.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .media-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(15, 35, 65, 0.13);
+    }
+
+    .publisher-logo-wrap {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 18px;
+    }
+
+    .publisher-logo {
+      max-height: 50px;
+      max-width: 180px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .publisher-logo.globes {
+      max-width: 210px;
+      max-height: 44px;
+    }
+
+    .publisher-logo.ynet {
+      max-width: 170px;
+      max-height: 55px;
+    }
+
+    .media-card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .media-card .source {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 12px;
+    }
+
+    .media-card p {
+      color: var(--muted);
+      margin: 0 0 22px;
+      font-size: 15px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .disclaimer {
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 13px;
+      background: rgba(255,255,255,0.65);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.78);
+      padding: 28px 6%;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .media-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Blue Season International Ltd.</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#activities">Activities</a>
+      <a href="guy-koubbi.html">Leadership</a>
+      <a href="media.html">Media</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Media & Recognition</div>
+      <h1>Selected Media Coverage</h1>
+      <p>
+        Publications and media references featuring Guy Koubbi, Blue Season International Ltd.,
+        and related business activities across entrepreneurship, alternative investments and long-term value creation.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="intro-card">
+      <h2>About Guy Koubbi</h2>
+      <p>
+        Guy Koubbi is the founder and owner of Blue Season International Ltd., an entrepreneur,
+        investor and business developer active since 2004. Over the years, he has participated in
+        business ventures, strategic partnerships and investment activities across multiple sectors
+        in Israel and internationally.
+      </p>
+    </section>
+
+    <h2 class="section-title">Featured Publications</h2>
+
+    <section class="media-grid">
+      <article class="media-card">
+        <div>
+          <div class="publisher-logo-wrap">
+            <img class="publisher-logo globes" src="assets/globes-logo.png" alt="Globes logo" />
+          </div>
+          <div class="source">Globes</div>
+          <h3>Business Profile & Entrepreneurial Activity</h3>
+          <p>
+            Business media coverage related to Guy Koubbi and entrepreneurial commercial ventures
+            developed throughout his career.
+          </p>
+        </div>
+        <a class="button" href="https://www.globes.co.il/news/article.aspx?did=1000011947" target="_blank" rel="noopener">Read Article</a>
+      </article>
+
+      <article class="media-card">
+        <div>
+          <div class="publisher-logo-wrap">
+            <img class="publisher-logo ynet" src="assets/ynet-logo.gif" alt="Ynet logo" />
+          </div>
+          <div class="source">Ynet Magazine</div>
+          <h3>Whisky Cask Investments</h3>
+          <p>
+            Coverage of whisky cask investments, alternative assets and the development of long-term
+            investment opportunities in the sector.
+          </p>
+        </div>
+        <a class="button" href="https://ymag.ynet.co.il/whiskey-ob/" target="_blank" rel="noopener">Read Article</a>
+      </article>
+
+      <article class="media-card">
+        <div>
+          <div class="publisher-logo-wrap">
+            <img class="publisher-logo ynet" src="assets/ynet-logo.gif" alt="Ynet logo" />
+          </div>
+          <div class="source">Ynet Magazine</div>
+          <h3>Alternative Investments</h3>
+          <p>
+            Discussion of alternative investment opportunities, long-term investment strategies
+            and emerging investment sectors.
+          </p>
+        </div>
+        <a class="button" href="https://ymag.ynet.co.il/new-invest-1/" target="_blank" rel="noopener">Read Article</a>
+      </article>
+    </section>
+
+    <p class="disclaimer">
+      Media names, logos and article links are presented for reference and attribution to the original publishers.
+      Full articles remain hosted by their respective publishers.
+    </p>
+  </main>
+
+  <footer>
+    Blue Season International Ltd. · Established 2004 · Israel
+  </footer>
+</body>
+</html>
