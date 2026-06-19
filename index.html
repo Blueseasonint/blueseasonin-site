@@ -1,6 +1,629 @@
-<!DOCTYPE html> <html>
-  <body>
-  <h1>Blue Seasonin</h1>
-  <p>Company info coming soon.</p>
-  </body>
-  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blue Season International Ltd. is a privately owned investment and business development company established in Israel in 2004, founded and led by Guy Koubbi." />
+  <meta name="keywords" content="Blue Season International, Guy Koubbi, גיא קובי, private investment, business development, Israel, alternative investments, strategic partnerships" />
+  <meta property="og:title" content="Blue Season International Ltd. | Guy Koubbi" />
+  <meta property="og:description" content="Building Long-Term Value Since 2004. A diversified private investment and business development company founded and led by Guy Koubbi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/guy-koubbi.jpg" />
+  <title>Blue Season International Ltd.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #071a33;
+      --navy-2: #0b2447;
+      --gold: #c8a45d;
+      --white: #ffffff;
+      --muted: #6d7480;
+      --light: #f4f6f9;
+      --line: rgba(255,255,255,0.14);
+      --dark-line: rgba(7, 26, 51, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(7, 26, 51, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--white);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.94;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      background:
+        linear-gradient(rgba(7,26,51,0.74), rgba(7,26,51,0.92)),
+        radial-gradient(circle at top right, rgba(200,164,93,0.24), transparent 34%),
+        linear-gradient(135deg, #071a33 0%, #0b2447 55%, #102f5c 100%);
+      position: relative;
+      overflow: hidden;
+      padding-top: 76px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 90px 0 70px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: 0.98;
+      margin: 0 0 24px;
+      letter-spacing: -0.05em;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 600;
+      margin: 0 0 22px;
+      color: #f7f4ec;
+    }
+
+    .hero p {
+      max-width: 790px;
+      font-size: 19px;
+      color: rgba(255,255,255,0.84);
+      margin: 0 0 34px;
+    }
+
+    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+    .btn-primary { background: var(--gold); color: var(--navy); }
+    .btn-primary:hover { transform: translateY(-2px); background: #d6b46e; }
+    .btn-secondary { border: 1px solid rgba(255,255,255,0.34); color: var(--white); }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--dark-line);
+    }
+
+    .stat {
+      background: var(--white);
+      padding: 34px 24px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 38px;
+      line-height: 1;
+      color: var(--navy);
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .stat span { color: var(--muted); font-size: 14px; font-weight: 600; }
+
+    section { padding: 96px 0; }
+    .section-light { background: var(--light); }
+    .section-dark { background: var(--navy); color: var(--white); }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 50px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.08;
+      margin: 0 0 18px;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0;
+    }
+    .section-dark .section-head p { color: rgba(255,255,255,0.72); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--dark-line);
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: 0 22px 60px rgba(7, 26, 51, 0.06);
+    }
+
+    .about-text p { margin: 0 0 18px; color: #273447; font-size: 17px; }
+    .quote-card {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: var(--white);
+      border: 0;
+    }
+    .quote-card .large {
+      font-size: 32px;
+      line-height: 1.18;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+    .quote-card p { color: rgba(255,255,255,0.72); margin: 0; }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 26px;
+      padding: 26px;
+      border: 1px solid var(--dark-line);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .year {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 20px;
+    }
+    .timeline-item h3 { margin: 0 0 6px; font-size: 20px; }
+    .timeline-item p { margin: 0; color: var(--muted); }
+
+    .activities-grid, .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .activity, .principle {
+      border: 1px solid var(--dark-line);
+      border-radius: 20px;
+      padding: 26px;
+      background: var(--white);
+      min-height: 190px;
+    }
+
+    .activity h3, .principle h3 { margin: 0 0 10px; font-size: 19px; }
+    .activity p, .principle p { margin: 0; color: var(--muted); font-size: 15px; }
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: rgba(200,164,93,0.16);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .leadership {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .leader-visual {
+      min-height: 440px;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 28px 80px rgba(0,0,0,0.24);
+      background: #0b2447;
+    }
+
+    .leader-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .leader-text p { color: rgba(255,255,255,0.78); font-size: 17px; margin: 0 0 16px; }
+    .linkedin-link {
+      display: inline-flex;
+      margin-top: 8px;
+      color: var(--gold);
+      font-weight: 800;
+      border-bottom: 1px solid rgba(200,164,93,0.55);
+    }
+    .linkedin-link:hover { color: #e0c27a; }
+
+    .ventures-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .venture {
+      border: 1px solid var(--dark-line);
+      border-radius: 18px;
+      padding: 22px;
+      background: #fff;
+    }
+    .venture h3 { margin: 0 0 8px; font-size: 18px; }
+    .venture p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .portfolio-card {
+      background: var(--white);
+      border-radius: 26px;
+      border: 1px solid var(--dark-line);
+      padding: 44px;
+      max-width: 920px;
+      box-shadow: 0 22px 60px rgba(7, 26, 51, 0.06);
+    }
+    .portfolio-card p { color: #273447; font-size: 18px; margin: 0 0 18px; }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 46px;
+      align-items: center;
+    }
+    .contact-box h2 { margin: 0 0 14px; font-size: 42px; letter-spacing: -0.04em; }
+    .contact-box p { color: rgba(255,255,255,0.72); margin: 0; }
+    .contact-details {
+      display: grid;
+      gap: 14px;
+    }
+    .contact-item {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .contact-item small { display: block; color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 4px; }
+
+    footer {
+      background: #041226;
+      color: rgba(255,255,255,0.72);
+      padding: 34px 0;
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    footer strong { color: var(--white); }
+
+    @media (max-width: 940px) {
+      .nav-links { display: none; }
+      .stats, .activities-grid, .principles-grid, .ventures-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid, .leadership, .contact-box { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+    }
+
+    @media (max-width: 580px) {
+      .container { width: min(100% - 28px, 1160px); }
+      .stats, .activities-grid, .principles-grid, .ventures-grid { grid-template-columns: 1fr; }
+      section { padding: 70px 0; }
+      .hero-content { padding: 70px 0 46px; }
+      .contact-box, .portfolio-card, .card { padding: 28px; }
+      .brand span { display: none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Blue Season International Ltd.",
+    "foundingDate": "2004",
+    "founder": {
+      "@type": "Person",
+      "name": "Guy Koubbi",
+      "sameAs": "https://www.linkedin.com/in/guy-koubbi-b1179429/"
+    },
+    "email": "blueseasonint@gmail.com",
+    "telephone": "+972545005905",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IL"
+    },
+    "description": "A privately owned investment and business development company established in Israel in 2004."
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Blue Season International">
+        <img src="assets/logo.jpg" alt="Blue Season International Logo" />
+        <span>Blue Season International</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#activities">Activities</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Established in Israel · 2004</div>
+        <h1>Blue Season International Ltd.</h1>
+        <h2>Building Long-Term Value Since 2004</h2>
+        <p>Founded and led by entrepreneur, investor and business developer Guy Koubbi, Blue Season International has participated for more than 22 years in strategic investments, business development initiatives, and entrepreneurial ventures across multiple sectors.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#about">About Blue Season</a>
+          <a class="btn btn-secondary" href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><strong>22+</strong><span>Years of Business Activity</span></div>
+      <div class="stat"><strong>2004</strong><span>Year Established</span></div>
+      <div class="stat"><strong>Multi-Sector</strong><span>Business Interests</span></div>
+      <div class="stat"><strong>International</strong><span>Business Perspective</span></div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>Who We Are</h2>
+          <p>A diversified private investment and business development company with a long-term perspective.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-text card">
+            <p>Founded in Israel in 2004, Blue Season International Ltd. is a privately owned investment and business development company wholly owned by entrepreneur and investor Guy Koubbi.</p>
+            <p>Over the past two decades, the company has maintained continuous business activity across a broad range of industries, combining entrepreneurial experience, strategic thinking, and long-term commitment.</p>
+            <p>Blue Season's philosophy is based on identifying opportunities with strong fundamentals, supporting capable management teams, and building sustainable value through disciplined execution and responsible growth.</p>
+            <p>Today, the company continues to participate in ventures, investments, and strategic partnerships both in Israel and internationally.</p>
+          </div>
+          <div class="quote-card card">
+            <div class="large">A diversified business platform built on experience, relationships, and long-term value creation.</div>
+            <p>Blue Season maintains an entrepreneurial mindset while focusing on opportunities supported by strong fundamentals, capable people, and strategic partnerships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section-light">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Journey</h2>
+          <p>More than two decades of continuous business activity, development, and diversification.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="year">2004</div>
+            <div><h3>Blue Season International Ltd. is established</h3><p>The company begins its operations in Israel, focusing on the import, marketing, and distribution of premium alcoholic beverages.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2004–2015</div>
+            <div><h3>Building commercial foundations</h3><p>Blue Season develops expertise in international trade, brand development, marketing, distribution networks, and commercial operations.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2015</div>
+            <div><h3>Expansion into new sectors</h3><p>The company expands beyond trade and distribution and begins diversifying into additional sectors and investment opportunities.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2015–Present</div>
+            <div><h3>Diversification and strategic growth</h3><p>Blue Season broadens its interests across real estate, fuel station ventures, land investments, industrial generator projects, technology startups, alternative investments, and strategic partnerships.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2024–2025</div>
+            <div><h3>New investment platforms</h3><p>Development and expansion of new strategic ventures, including activities related to alternative investments, whisky casks, and international business initiatives.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">Today</div>
+            <div><h3>Long-term opportunities</h3><p>Blue Season continues to pursue business opportunities, investments, and partnerships with a long-term perspective and a commitment to sustainable value creation.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities">
+      <div class="container">
+        <div class="section-head">
+          <h2>Areas of Activity</h2>
+          <p>Blue Season participates in a broad range of sectors, ventures, and strategic business opportunities.</p>
+        </div>
+        <div class="activities-grid">
+          <div class="activity"><div class="icon">01</div><h3>Commercial Real Estate</h3><p>Participation in commercial property projects, income-producing assets, and long-term real estate opportunities.</p></div>
+          <div class="activity"><div class="icon">02</div><h3>Energy & Infrastructure</h3><p>Investments and business interests in fuel station ventures, industrial equipment, and infrastructure-related projects.</p></div>
+          <div class="activity"><div class="icon">03</div><h3>International Trade</h3><p>Import, distribution, and commercial activities across domestic and international markets.</p></div>
+          <div class="activity"><div class="icon">04</div><h3>Premium Spirits</h3><p>Import, marketing, distribution, and related activities within the premium alcoholic beverage sector.</p></div>
+          <div class="activity"><div class="icon">05</div><h3>Alternative Investments</h3><p>Evaluation and participation in alternative asset classes and non-traditional investment opportunities.</p></div>
+          <div class="activity"><div class="icon">06</div><h3>Scottish Whisky Casks</h3><p>Strategic involvement in the acquisition, management, and development of whisky cask investment opportunities.</p></div>
+          <div class="activity"><div class="icon">07</div><h3>Technology & Innovation</h3><p>Participation in startup ventures, emerging technologies, and entrepreneurial initiatives.</p></div>
+          <div class="activity"><div class="icon">08</div><h3>Strategic Partnerships</h3><p>Collaboration with entrepreneurs, operators, investors, and business partners across multiple industries.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="container">
+        <div class="section-head">
+          <h2>What We Stand For</h2>
+          <p>The principles that guide Blue Season's business activity and long-term approach.</p>
+        </div>
+        <div class="principles-grid">
+          <div class="principle"><h3>Long-Term Perspective</h3><p>Sustainable value is built through patience, discipline, and strategic thinking.</p></div>
+          <div class="principle"><h3>Entrepreneurship</h3><p>We support innovation, initiative, and the pursuit of meaningful opportunities.</p></div>
+          <div class="principle"><h3>Strategic Partnerships</h3><p>Strong relationships remain at the foundation of successful business ventures.</p></div>
+          <div class="principle"><h3>Diversification</h3><p>A broad perspective across sectors allows for resilience, flexibility, and opportunity.</p></div>
+          <div class="principle"><h3>Integrity</h3><p>Professionalism, responsibility, and trust guide every business relationship.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="section-dark">
+      <div class="container leadership">
+        <a class="leader-visual" href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener" aria-label="Guy Koubbi LinkedIn profile">
+          <img src="assets/guy-koubbi.jpg" alt="Guy Koubbi, Founder and Owner of Blue Season International Ltd." />
+        </a>
+        <div class="leader-text">
+          <div class="section-head" style="margin-bottom: 26px;">
+            <h2>Guy Koubbi</h2>
+            <p>Entrepreneur, investor, and business developer.</p>
+          </div>
+          <p>Guy Koubbi is an entrepreneur, investor, and business developer with more than two decades of experience across multiple industries and business sectors.</p>
+          <p>Since founding Blue Season International Ltd. in 2004, he has participated in the establishment, growth, and development of numerous ventures and strategic initiatives in Israel and internationally.</p>
+          <p>Over the years, he has served in various capacities including founder, shareholder, director, strategic partner, and investor, contributing to companies and ventures operating across a diverse range of industries.</p>
+          <p>His business philosophy emphasizes long-term value creation, disciplined execution, strategic partnerships, and responsible growth.</p>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener">View LinkedIn Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Portfolio & Strategic Interests</h2>
+          <p>Strategic participation across multiple companies, ventures, and business sectors.</p>
+        </div>
+        <div class="portfolio-card">
+          <p>Over more than two decades of business activity, Blue Season International and its founder have participated in multiple companies, ventures, and strategic partnerships across various industries.</p>
+          <p>The company maintains interests in real estate, infrastructure, international trade, premium spirits, alternative investments, technology ventures, and other entrepreneurial initiatives in Israel and internationally.</p>
+          <p>Blue Season's investment approach focuses on long-term value creation, strong management, strategic partnerships, and sustainable growth opportunities.</p>
+          <div class="ventures-grid">
+            <div class="venture"><h3>Blue Season International</h3><p>Private investment and business development platform established in 2004.</p></div>
+            <div class="venture"><h3>Anchor Yields</h3><p>Alternative investment opportunities and long-term value creation.</p></div>
+            <div class="venture"><h3>CaskFlow</h3><p>International whisky cask investment and management platform.</p></div>
+            <div class="venture"><h3>Additional Strategic Interests</h3><p>Further ventures, partnerships, and investment interests across multiple sectors.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-light">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2>Contact</h2>
+            <p>For business inquiries, strategic partnerships, investment opportunities, and commercial collaborations, please feel free to contact us.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item"><small>Email</small><a href="mailto:blueseasonint@gmail.com">blueseasonint@gmail.com</a></div>
+            <div class="contact-item"><small>Telephone</small><a href="tel:+972545005905">+972 54 500 5905</a></div>
+            <div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener">Guy Koubbi LinkedIn Profile</a></div>
+            <div class="contact-item"><small>Company</small>Blue Season International Ltd. · Established 2004 · Israel</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>Blue Season International Ltd.</strong><br />Private Investment & Business Development Company</div>
+      <div>© 2004–2026 Blue Season International Ltd. All Rights Reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
