@@ -626,6 +626,56 @@ header { box-shadow: 0 14px 40px rgba(0,0,0,.16); }
   line-height: 1.7;
 }
 
+
+.clickable-card {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.clickable-card::after {
+  content: "↗";
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(216,184,112,.44);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.66);
+  font-size: 17px;
+  line-height: 1;
+  background: rgba(5,19,37,.34);
+  transition: transform .24s ease, color .24s ease, border-color .24s ease, background .24s ease;
+}
+
+.clickable-card:hover::after {
+  color: var(--gold);
+  border-color: rgba(216,184,112,.92);
+  background: rgba(5,19,37,.56);
+  transform: translate(3px,-3px);
+}
+
+.visit-website {
+  margin-top: 16px;
+  color: var(--gold-2);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .24s ease, transform .24s ease;
+}
+
+.clickable-card:hover .visit-website {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .media-card, .activity, .timeline-item { transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
 .media-card:hover, .activity:hover, .timeline-item:hover {
   transform: translateY(-4px);
@@ -827,7 +877,7 @@ header { box-shadow: 0 14px 40px rgba(0,0,0,.16); }
 
         <div class="portfolio-v2-grid portfolio-production-grid">
 
-          <article class="company-card featured-company production-card">
+          <a href="https://caskflow.uk/" class="company-card featured-company production-card clickable-card" target="_blank" rel="noopener noreferrer" aria-label="Visit Cask Flow Limited website">
             <div class="featured-ribbon">Flagship Investment</div>
             <div class="company-logo-wrap premium-logo-panel">
               <img class="company-logo logo-caskflow" src="assets/portfolio/caskflow-logo.png" alt="Cask Flow Limited logo">
@@ -842,7 +892,8 @@ header { box-shadow: 0 14px 40px rgba(0,0,0,.16); }
                 <em>Strategic Shareholder</em>
               </div>
             </div>
-          </article>
+            <div class="visit-website">Visit Website →</div>
+          </a>
 
           <article class="company-card production-card">
             <div class="company-logo-wrap premium-logo-panel">
@@ -860,7 +911,7 @@ header { box-shadow: 0 14px 40px rgba(0,0,0,.16); }
             </div>
           </article>
 
-          <article class="company-card production-card">
+          <a href="https://www.whiskytrade.co.il/" class="company-card production-card clickable-card" target="_blank" rel="noopener noreferrer" aria-label="Visit Whisky Trade website">
             <div class="company-logo-wrap premium-logo-panel">
               <img class="company-logo logo-whisky" src="assets/portfolio/whisky-trade-logo.png" alt="Whisky Trade logo">
             </div>
@@ -874,7 +925,8 @@ header { box-shadow: 0 14px 40px rgba(0,0,0,.16); }
                 <em>Director</em>
               </div>
             </div>
-          </article>
+            <div class="visit-website">Visit Website →</div>
+          </a>
 
           <article class="company-card production-card">
             <div class="company-logo-wrap premium-logo-panel">
@@ -891,7 +943,7 @@ header { box-shadow: 0 14px 40px rgba(0,0,0,.16); }
             </div>
           </article>
 
-          <article class="company-card production-card">
+          <a href="https://www.multigabay.co.il/" class="company-card production-card clickable-card" target="_blank" rel="noopener noreferrer" aria-label="Visit Multi by Gabay Group website">
             <div class="company-logo-wrap premium-logo-panel">
               <img class="company-logo logo-multi" src="assets/portfolio/multi-logo.png" alt="Multi by Gabay Group and The Eighth Floor Ltd. logo">
             </div>
@@ -905,7 +957,8 @@ header { box-shadow: 0 14px 40px rgba(0,0,0,.16); }
                 <em>Shareholder</em>
               </div>
             </div>
-          </article>
+            <div class="visit-website">Visit Website →</div>
+          </a>
 
           <article class="company-card production-card">
             <div class="company-logo-wrap premium-logo-panel">
