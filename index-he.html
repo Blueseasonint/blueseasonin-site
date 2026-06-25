@@ -24,29 +24,74 @@
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Blue Season International Ltd.",
-  "alternateName":"בלו סיזן אינטרנשיונל בע״מ",
-  "url":"https://blueseasonint.com/",
-  "logo":"https://blueseasonint.com/assets/blue-season-symbol.png",
-  "founder":{
-    "@type":"Person",
-    "name":"Guy Koubbi",
-    "alternateName":"גיא קובי",
-    "url":"https://blueseasonint.com/guy-koubbi-he.html"
-  },
-  "sameAs":[
-    "https://www.linkedin.com/company/blue-season-international/",
-    "https://www.linkedin.com/in/guy-koubbi-b1179429/"
-  ],
-  "knowsAbout":[
-    "Strategic Investments",
-    "Business Development",
-    "Commercial Real Estate",
-    "Alternative Investments",
-    "International Trade",
-    "Scotch Whisky Casks",
-    "Technology Investments"
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://blueseasonint.com/#organization",
+      "name":"Blue Season International",
+      "legalName":"Blue Season International Ltd.",
+      "alternateName":"בלו סיזן אינטרנשיונל בע״מ",
+      "url":"https://blueseasonint.com/",
+      "logo":{
+        "@type":"ImageObject",
+        "@id":"https://blueseasonint.com/#logo",
+        "url":"https://blueseasonint.com/assets/blue-season-symbol.png",
+        "contentUrl":"https://blueseasonint.com/assets/blue-season-symbol.png"
+      },
+      "image":{
+        "@id":"https://blueseasonint.com/#logo"
+      },
+      "description":"בלו סיזן אינטרנשיונל בע״מ היא חברת השקעות פרטית ופיתוח עסקי הפועלת מאז 2004 בתחומי השקעות אסטרטגיות, נדל״ן מסחרי, השקעות אלטרנטיביות ופיתוח עסקי בינלאומי.",
+      "foundingDate":"2004",
+      "founder":{
+        "@type":"Person",
+        "@id":"https://blueseasonint.com/guy-koubbi-he.html#person",
+        "name":"Guy Koubbi",
+        "alternateName":"גיא קובי",
+        "url":"https://blueseasonint.com/guy-koubbi-he.html"
+      },
+      "sameAs":[
+        "https://www.linkedin.com/company/blue-season-international/",
+        "https://www.linkedin.com/in/guy-koubbi-b1179429/"
+      ],
+      "knowsAbout":[
+        "Strategic Investments",
+        "Business Development",
+        "Commercial Real Estate",
+        "Alternative Investments",
+        "International Trade",
+        "Scotch Whisky Casks",
+        "Technology Investments"
+      ]
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://blueseasonint.com/#website",
+      "url":"https://blueseasonint.com/",
+      "name":"Blue Season International",
+      "alternateName":"בלו סיזן אינטרנשיונל בע״מ",
+      "publisher":{
+        "@id":"https://blueseasonint.com/#organization"
+      },
+      "inLanguage":"he"
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://blueseasonint.com/index-he.html#webpage",
+      "url":"https://blueseasonint.com/index-he.html",
+      "name":"בלו סיזן אינטרנשיונל בע״מ | Blue Season International",
+      "description":"בלו סיזן אינטרנשיונל בע״מ היא חברת השקעות פרטית ופיתוח עסקי הפועלת מאז 2004.",
+      "isPartOf":{
+        "@id":"https://blueseasonint.com/#website"
+      },
+      "about":{
+        "@id":"https://blueseasonint.com/#organization"
+      },
+      "primaryImageOfPage":{
+        "@id":"https://blueseasonint.com/#logo"
+      },
+      "inLanguage":"he"
+    }
   ]
 }
 </script>
@@ -55,13 +100,13 @@
 <body>
   <a class="mobile-lang" href="index.html">English</a>
 <header><div class="container nav"><a class="brand" href="#top" aria-label="בלו סיזן אינטרנשיונל"><img src="assets/blue-season-symbol.png" alt="לוגו בלו סיזן אינטרנשיונל"><span>בלו סיזן אינטרנשיונל</span></a><nav class="nav-links" aria-label="ניווט ראשי"><a href="#about">מי אנחנו</a><a href="#activities">תחומי פעילות</a><a href="#leadership">גיא קובי</a><a href="#portfolio">פורטפוליו</a><a href="#media-preview">מדיה ופרסומים</a><a href="#contact">יצירת קשר</a><a class="nav-cta" href="#contact">בקשה לשיחה חוזרת</a><a class="lang-switch" href="index.html">English</a></nav></div></header>
-<main id="top"><section class="hero"><div class="container hero-grid"><div><div class="eyebrow">נכסים אמיתיים · חשיבה ארוכת טווח</div><h1><span>ערך אמיתי נבנה לאורך זמן.</span><span class="gold-line">אנו פועלים לשמרו לדורות הבאים.</span></h1><p>בלו סיזן אינטרנשיונל בע״מ משלבת חשיבה השקעתית אסטרטגית עם חשיפה לנכסים מוחשיים, השקעות אלטרנטיביות, חביות וויסקי פרימיום, הזדמנויות פיתוח עסקי ושותפויות ארוכות טווח.</p><div class="btn-row"><a class="btn btn-primary" href="#contact">בקשה לשיחה חוזרת</a><a class="btn btn-secondary" href="#portfolio">לצפייה בפורטפוליו</a></div><div class="hero-metrics"><div class="metric"><strong>2004</strong><span>נוסדה בישראל</span></div><div class="metric"><strong>22+</strong><span>שנות פעילות</span></div><div class="metric"><strong>גלובלי</strong><span>ראייה עסקית בינלאומית</span></div></div></div><div class="hero-photo"><img src="assets/guy111.png" alt="גיא קובי במחסן חביות וויסקי"></div></div></section>
-<section id="about"><div class="container"><div class="section-head"><h2>מי אנחנו</h2><p>חברת השקעות פרטית ופיתוח עסקי הפועלת מתוך תפיסה ארוכת טווח ומתמקדת ביצירת ערך בר־קיימא.</p></div><div class="about-grid"><div class="about-image"><img src="assets/guy444.png" alt="גיא קובי במחסן חביות וויסקי"></div><div class="about-text card"><p>בלו סיזן אינטרנשיונל בע״מ היא חברת השקעות פרטית ופיתוח עסקי, בבעלות היזם והמשקיע גיא קובי, הפועלת בישראל ובשווקים בינלאומיים מאז שנת 2004.</p><p>במהלך למעלה משני עשורים של פעילות רציפה, הייתה החברה מעורבת בהקמה, פיתוח וליווי של מיזמים עסקיים, השקעות ושותפויות אסטרטגיות במגוון רחב של תחומים.</p><p>גישת ההשקעה של החברה מבוססת על איתור הזדמנויות בעלות יסודות חזקים, שיתוף פעולה עם גורמים מקצועיים מובילים ופיתוח ערך באמצעות ניהול אחראי, משמעת עסקית ותכנון אסטרטגי.</p><p>כיום ממשיכה בלו סיזן אינטרנשיונל בע״מ לפעול במגוון תחומי פעילות, השקעות ויוזמות עסקיות, תוך מחויבות ליציבות, צמיחה ויצירת ערך לאורך זמן.</p><div class="founder-caption"><strong>גיא קובי</strong> · מייסד ובעלים · השקעות אסטרטגיות, פיתוח עסקי ונכסים אלטרנטיביים.</div></div></div></div></section>
+<main id="top"><section class="hero"><div class="container hero-grid"><div><div class="eyebrow">נכסים אמיתיים · חשיבה ארוכת טווח</div><h1><span>ערך אמיתי נבנה לאורך זמן.</span><span class="gold-line">אנו פועלים לשמרו לדורות הבאים.</span></h1><p>בלו סיזן אינטרנשיונל בע״מ משלבת חשיבה השקעתית אסטרטגית עם חשיפה לנכסים מוחשיים, השקעות אלטרנטיביות, חביות וויסקי פרימיום, הזדמנויות פיתוח עסקי ושותפויות ארוכות טווח.</p><div class="btn-row"><a class="btn btn-primary" href="#contact">בקשה לשיחה חוזרת</a><a class="btn btn-secondary" href="#portfolio">לצפייה בפורטפוליו</a></div><div class="hero-metrics"><div class="metric"><strong>2004</strong><span>נוסדה בישראל</span></div><div class="metric"><strong>22+</strong><span>שנות פעילות</span></div><div class="metric"><strong>גלובלי</strong><span>ראייה עסקית בינלאומית</span></div></div></div><div class="hero-photo"><img src="assets/guy111.png" alt="גיא קובי (Guy Koubbi), מייסד בלו סיזן אינטרנשיונל בע״מ, במחסן חביות וויסקי"></div></div></section>
+<section id="about"><div class="container"><div class="section-head"><h2>מי אנחנו</h2><p>חברת השקעות פרטית ופיתוח עסקי הפועלת מתוך תפיסה ארוכת טווח ומתמקדת ביצירת ערך בר־קיימא.</p></div><div class="about-grid"><div class="about-image"><img src="assets/guy444.png" alt="גיא קובי (Guy Koubbi), Founder of Blue Season International Ltd., במחסן חביות וויסקי"></div><div class="about-text card"><p>בלו סיזן אינטרנשיונל בע״מ היא חברת השקעות פרטית ופיתוח עסקי, בבעלות היזם והמשקיע גיא קובי, הפועלת בישראל ובשווקים בינלאומיים מאז שנת 2004.</p><p>במהלך למעלה משני עשורים של פעילות רציפה, הייתה החברה מעורבת בהקמה, פיתוח וליווי של מיזמים עסקיים, השקעות ושותפויות אסטרטגיות במגוון רחב של תחומים.</p><p>גישת ההשקעה של החברה מבוססת על איתור הזדמנויות בעלות יסודות חזקים, שיתוף פעולה עם גורמים מקצועיים מובילים ופיתוח ערך באמצעות ניהול אחראי, משמעת עסקית ותכנון אסטרטגי.</p><p>כיום ממשיכה בלו סיזן אינטרנשיונל בע״מ לפעול במגוון תחומי פעילות, השקעות ויוזמות עסקיות, תוך מחויבות ליציבות, צמיחה ויצירת ערך לאורך זמן.</p><div class="founder-caption"><strong>גיא קובי</strong> · מייסד ובעלים · השקעות אסטרטגיות, פיתוח עסקי ונכסים אלטרנטיביים.</div></div></div></div></section>
 <section id="journey" class="section-light"><div class="container"><div class="section-head"><h2>המסע שלנו</h2><p>יותר משני עשורים של פעילות עסקית, יזמות, השקעות ופיתוח הזדמנויות ארוכות טווח.</p></div><div class="timeline"><div class="timeline-item"><div class="year">2004</div><div><h3>הקמת החברה</h3><p>בלו סיזן אינטרנשיונל בע״מ נוסדה בישראל מתוך חזון ליצירת פעילות עסקית ארוכת טווח המבוססת על יזמות, מסחר בינלאומי ופיתוח מותגים.</p></div></div><div class="timeline-item"><div class="year">2004–2015</div><div><h3>בניית יסודות עסקיים</h3><p>החברה צברה ניסיון משמעותי בפיתוח פעילות מסחרית, ניהול מערכי שיווק והפצה, יצירת שותפויות עסקיות וניהול פעילות בינלאומית.</p></div></div><div class="timeline-item"><div class="year">2015–היום</div><div><h3>התרחבות וגיוון אסטרטגי</h3><p>החברה הרחיבה את פעילותה לתחומי נדל״ן, תשתיות, השקעות אלטרנטיביות, חביות וויסקי סקוטי, טכנולוגיה ויוזמות עסקיות מגוונות.</p></div></div><div class="timeline-item"><div class="year">היום</div><div><h3>יצירת ערך לטווח ארוך</h3><p>בלו סיזן ממשיכה לבחון הזדמנויות חדשות, לפתח שותפויות אסטרטגיות ולהשקיע בתחומים שבהם ניתן לייצר ערך אמיתי ומתמשך.</p></div></div></div></div></section>
 <section id="activities"><div class="container"><div class="section-head"><h2>תחומי פעילות</h2><p>בלו סיזן אינטרנשיונל בע״מ פועלת במגוון תחומים, השקעות ויוזמות עסקיות מתוך גישה של ניהול אחראי וחשיבה אסטרטגית.</p></div><div class="activities-grid photo-activities">
 <div class="activity"><div class="activity-img" style="background-image:url(assets/sector-1.jpg)"></div><div class="activity-body"><div class="activity-num">01</div><h3>נדל״ן מניב ומסחרי</h3><p>השתתפות בהזדמנויות בתחום הנדל״ן המניב והמסחרי, תוך התמקדות בנכסים בעלי פוטנציאל ליצירת ערך מתמשך.</p></div></div><div class="activity"><div class="activity-img" style="background-image:url(assets/sector-2.jpg)"></div><div class="activity-body"><div class="activity-num">02</div><h3>אנרגיה ותשתיות</h3><p>פעילות בתחומי האנרגיה, התשתיות והציוד התעשייתי, לצד בחינת הזדמנויות בעלות חשיבות אסטרטגית.</p></div></div><div class="activity"><div class="activity-img" style="background-image:url(assets/sector-3.jpg)"></div><div class="activity-body"><div class="activity-num">03</div><h3>מסחר בינלאומי</h3><p>ניסיון רב שנים בתחומי הייבוא, השיווק, ההפצה והפעילות המסחרית בישראל ובשווקים בינלאומיים.</p></div></div><div class="activity"><div class="activity-img" style="background-image:url(assets/sector-4.jpg)"></div><div class="activity-body"><div class="activity-num">04</div><h3>משקאות פרימיום</h3><p>מעורבות בתחום המשקאות האיכותיים והמותגים הבינלאומיים, לרבות פעילות מסחרית, פיתוח שווקים ושיתופי פעולה.</p></div></div><div class="activity"><div class="activity-img" style="background-image:url(assets/sector-5.jpg)"></div><div class="activity-body"><div class="activity-num">05</div><h3>השקעות אלטרנטיביות</h3><p>איתור ובחינה של הזדמנויות השקעה מחוץ לאפיקים המסורתיים, תוך התמקדות בנכסים בעלי פוטנציאל ייחודי.</p></div></div><div class="activity"><div class="activity-img" style="background-image:url(assets/sector-6.jpg)"></div><div class="activity-body"><div class="activity-num">06</div><h3>חביות וויסקי סקוטי</h3><p>פעילות בתחום חביות הוויסקי הסקוטי כאפיק השקעה אלטרנטיבי המבוסס על נכסים מוחשיים ופוטנציאל השבחה.</p></div></div><div class="activity"><div class="activity-img" style="background-image:url(assets/sector-7.jpg)"></div><div class="activity-body"><div class="activity-num">07</div><h3>טכנולוגיה וחדשנות</h3><p>בחינת השקעות ומעורבות ביוזמות טכנולוגיות, חברות צמיחה ומיזמים חדשניים.</p></div></div><div class="activity"><div class="activity-img" style="background-image:url(assets/sector-8.jpg)"></div><div class="activity-body"><div class="activity-num">08</div><h3>שותפויות אסטרטגיות</h3><p>שיתוף פעולה עם יזמים, משקיעים, מנהלים ובעלי מקצוע במגוון תחומי פעילות ושווקים.</p></div></div></div></div></section>
 <section class="section-light"><div class="container"><div class="section-head"><h2>הערכים שלנו</h2><p>העקרונות המנחים את פעילותה של בלו סיזן אינטרנשיונל בע״מ ואת גישתה ליצירת ערך לאורך זמן.</p></div><div class="principles-panel"><div class="principle"><div class="principle-num">01</div><h3>חשיבה ארוכת טווח</h3><p>כל השקעה, שותפות או יוזמה עסקית נבחנת מתוך ראייה אסטרטגית רחבה ומחויבות ליציבות ולצמיחה מתמשכת.</p></div><div class="principle"><div class="principle-num">02</div><h3>יזמות ויוזמה</h3><p>אנו פועלים לאיתור הזדמנויות, פיתוח רעיונות והפיכתם לפעילות עסקית בעלת ערך ממשי.</p></div><div class="principle"><div class="principle-num">03</div><h3>שותפויות איכותיות</h3><p>אנו מאמינים במערכות יחסים ארוכות טווח המבוססות על אמון, מקצועיות, כבוד הדדי ומטרות משותפות.</p></div><div class="principle"><div class="principle-num">04</div><h3>גיוון ואיזון</h3><p>חשיפה למגוון תחומי פעילות ואפיקי השקעה מאפשרת גמישות, יציבות ויכולת להתמודד עם שינויים.</p></div><div class="principle"><div class="principle-num">05</div><h3>יושרה ואחריות</h3><p>אחריות, שקיפות, אמינות ומחויבות לסטנדרטים מקצועיים גבוהים מהווים בסיס לכל פעילות והחלטה.</p></div></div></div></section>
-<section id="leadership" class="section-dark"><div class="container leadership"><a class="leader-visual" href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener"><img src="assets/guy-koubbi.jpg" alt="גיא קובי"></a><div class="leader-text"><div class="section-head" style="margin-bottom:24px"><h2>גיא קובי</h2><p>יזם, משקיע ומפתח עסקים.</p></div><p>גיא קובי (Guy Koubbi) הוא יזם, משקיע ואיש עסקים בעל ניסיון של למעלה משני עשורים במגוון תחומי פעילות, השקעות ופיתוח עסקי.</p><p>מאז הקמת בלו סיזן אינטרנשיונל בע״מ בשנת 2004, היה מעורב בהקמה, פיתוח והובלה של מיזמים עסקיים, השקעות ושותפויות אסטרטגיות בישראל ובשווקים בינלאומיים.</p><p>במהלך השנים פעל כמייסד, בעל מניות, דירקטור, שותף אסטרטגי ומשקיע, תוך מעורבות בתחומי הנדל״ן, המסחר הבינלאומי, השקעות אלטרנטיביות, תשתיות, טכנולוגיה ויוזמות נוספות.</p><p>גישתו העסקית מבוססת על חשיבה ארוכת טווח, קבלת החלטות מושכלת, יצירת שותפויות איכותיות וזיהוי הזדמנויות בעלות פוטנציאל ליצירת ערך מתמשך.</p><a class="linkedin-link" href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener">לצפייה בפרופיל LinkedIn</a></div></div></section>
+<section id="leadership" class="section-dark"><div class="container leadership"><a class="leader-visual" href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener"><img src="assets/guy-koubbi.jpg" alt="גיא קובי (Guy Koubbi), מייסד ובעלים של בלו סיזן אינטרנשיונל בע״מ"></a><div class="leader-text"><div class="section-head" style="margin-bottom:24px"><h2>גיא קובי</h2><p>יזם, משקיע ומפתח עסקים.</p></div><p>גיא קובי (Guy Koubbi) הוא יזם, משקיע ואיש עסקים בעל ניסיון של למעלה משני עשורים במגוון תחומי פעילות, השקעות ופיתוח עסקי.</p><p>מאז הקמת בלו סיזן אינטרנשיונל בע״מ בשנת 2004, היה מעורב בהקמה, פיתוח והובלה של מיזמים עסקיים, השקעות ושותפויות אסטרטגיות בישראל ובשווקים בינלאומיים.</p><p>במהלך השנים פעל כמייסד, בעל מניות, דירקטור, שותף אסטרטגי ומשקיע, תוך מעורבות בתחומי הנדל״ן, המסחר הבינלאומי, השקעות אלטרנטיביות, תשתיות, טכנולוגיה ויוזמות נוספות.</p><p>גישתו העסקית מבוססת על חשיבה ארוכת טווח, קבלת החלטות מושכלת, יצירת שותפויות איכותיות וזיהוי הזדמנויות בעלות פוטנציאל ליצירת ערך מתמשך.</p><a class="linkedin-link" href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener">לצפייה בפרופיל LinkedIn</a></div></div></section>
 <section id="portfolio"><div class="container"><div class="section-head"><h2>פורטפוליו ותחומי עניין אסטרטגיים</h2><p>מעורבות במגוון השקעות, מיזמים ושותפויות עסקיות בישראל ובעולם.</p></div><div class="portfolio-card"><p>במהלך למעלה משני עשורים של פעילות עסקית, הייתה בלו סיזן אינטרנשיונל בע״מ מעורבת במגוון השקעות, מיזמים ושותפויות עסקיות בישראל ובעולם.</p><p>פעילות החברה משתרעת על פני תחומים מרכזיים, בהם נדל״ן, תשתיות, מסחר בינלאומי, השקעות אלטרנטיביות, חביות וויסקי סקוטי, טכנולוגיה ויוזמות עסקיות נוספות.</p><div class="ventures-grid"><div class="venture"><div class="venture-logo"><img src="assets/blue-season-logo-master.png" alt="בלו סיזן"></div><h3>בלו סיזן אינטרנשיונל בע״מ</h3><p>חברת השקעות פרטית ופיתוח עסקי הפועלת מאז שנת 2004.</p></div><div class="venture"><div class="venture-logo"><img src="assets/anchor-yields-logo.png" alt="עוגן תשואה"></div><h3>עוגן תשואה בע״מ</h3><p>חברה המתמקדת באפיקי השקעה אלטרנטיביים וביצירת הזדמנויות ארוכות טווח.</p></div><div class="venture"><div class="venture-logo"><img src="assets/caskflow-logo.png" alt="קסק פלואו"></div><h3>קסק פלואו בע״מ</h3><p>פלטפורמה המתמחה באיתור, רכישה, ניהול ופיתוח נכסי וויסקי סקוטי.</p></div><div class="venture"><div class="venture-logo"><div style="font-size:46px;color:var(--gold)">＋</div></div><h3>השקעות ויוזמות נוספות</h3><p>מעורבות במיזמים עסקיים, השקעות ושותפויות אסטרטגיות במגוון תחומים.</p></div></div></div></div></section>
 <section id="media-preview" class="section-light"><div class="container"><div class="section-head"><h2>מדיה ופרסומים</h2><p>סיקור תקשורתי ופרסומים הנוגעים לגיא קובי, בלו סיזן אינטרנשיונל בע״מ ופעילויות עסקיות קשורות.</p></div><div class="media-grid"><article class="media-card"><div class="publisher-logo-wrap"><img class="publisher-logo" src="assets/globes-logo.png" alt="גלובס"></div><h3>פרופיל עסקי ופעילות יזמית</h3><p>סקירה העוסקת בפעילותו העסקית של גיא קובי ובמיזמים בהם היה מעורב לאורך השנים.</p><a class="btn" href="https://www.globes.co.il/news/article.aspx?did=1000011947" target="_blank" rel="noopener">לקריאת הכתבה</a></article><article class="media-card"><div class="publisher-logo-wrap"><img class="publisher-logo" src="assets/ynet-logo.gif" alt="ynet"></div><h3>השקעה בחביות וויסקי סקוטי</h3><p>כתבה העוסקת בעולם חביות הוויסקי הסקוטי כאפיק השקעה אלטרנטיבי.</p><a class="btn" href="https://ymag.ynet.co.il/whiskey-ob/" target="_blank" rel="noopener">לקריאת הכתבה</a></article><article class="media-card"><div class="publisher-logo-wrap"><img class="publisher-logo" src="assets/ynet-logo.gif" alt="ynet"></div><h3>השקעות אלטרנטיביות</h3><p>סקירה של אפיקי השקעה אלטרנטיביים והזדמנויות מחוץ לשווקים המסורתיים.</p><a class="btn" href="https://ymag.ynet.co.il/new-invest-1/" target="_blank" rel="noopener">לקריאת הכתבה</a></article></div></div></section>
 <section id="contact" class="section-light"><div class="container"><div class="contact-box"><div><div class="eyebrow">יצירת קשר</div><h2>נשמח לשוחח.</h2><p>בין אם אתם בוחנים הזדמנות השקעה, שותפות אסטרטגית, פעילות בתחום ההשקעות האלטרנטיביות או יוזמה עסקית חדשה — נשמח להכיר, להקשיב ולבחון אפשרויות לשיתוף פעולה.</p><div class="response">אנו שואפים לחזור לכל פנייה בהקדם האפשרי, ובדרך כלל במהלך יום העסקים הקרוב.</div></div><form class="callback-form" action="https://formsubmit.co/blueseasonint@gmail.com" method="POST"><input type="hidden" name="_subject" value="New Blue Season Consultation Request"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><div class="form-row"><input name="Full Name" type="text" placeholder="שם מלא *" required><input name="Phone" type="tel" placeholder="מספר טלפון *" required></div><input name="Email" type="email" placeholder="כתובת דוא״ל *" required><textarea name="Message" placeholder="הודעה (אופציונלי)"></textarea><div class="radio-row"><span>אופן יצירת קשר מועדף:</span><label><input type="radio" name="Preferred Contact" value="Phone" checked>טלפון</label><label><input type="radio" name="Preferred Contact" value="Email">דוא״ל</label><label><input type="radio" name="Preferred Contact" value="WhatsApp">WhatsApp</label></div><button class="btn btn-primary" type="submit">בקשה לשיחה חוזרת</button></form></div><div class="contact-details"><div class="contact-item"><small>דוא״ל</small><a href="mailto:blueseasonint@gmail.com">blueseasonint@gmail.com</a></div><div class="contact-item"><small>טלפון</small><a href="tel:+972545005905">054-5005905</a></div><div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/guy-koubbi-b1179429/" target="_blank" rel="noopener">גיא קובי</a></div><div class="contact-item"><small>חברה</small>בלו סיזן אינטרנשיונל בע״מ · ישראל · נוסדה בשנת 2004</div></div></div></section></main><footer><div class="container footer-inner"><div><strong>בלו סיזן אינטרנשיונל בע״מ</strong><br>חברת השקעות פרטית ופיתוח עסקי<br><a href="media-he.html" style="color:rgba(255,255,255,.82)">מדיה ופרסומים</a></div><div>© 2004–2026 בלו סיזן אינטרנשיונל בע״מ. כל הזכויות שמורות.</div></div></footer></body></html>
