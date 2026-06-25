@@ -397,6 +397,281 @@
     font-weight: 800;
   }
 }
+
+/* Final professional design pass */
+:root {
+  --radius-xl: 30px;
+  --radius-lg: 24px;
+  --premium-shadow: 0 30px 90px rgba(0,0,0,.28);
+}
+
+.portfolio-v2 {
+  padding: 112px 0 100px;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(216,184,112,.18), transparent 30%),
+    radial-gradient(circle at 86% 18%, rgba(255,255,255,.06), transparent 28%),
+    linear-gradient(135deg, #061426 0%, #0b2440 56%, #071a33 100%);
+}
+
+.portfolio-v2-head {
+  max-width: 980px;
+  margin-bottom: 54px;
+}
+
+.portfolio-v2-head h2 span {
+  color: #fff;
+}
+
+.portfolio-sector-strip {
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.portfolio-sector-strip span {
+  color: rgba(255,255,255,.82);
+  border: 1px solid rgba(200,164,93,.32);
+  background: rgba(255,255,255,.045);
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.portfolio-v2-grid {
+  gap: 24px;
+}
+
+.company-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: rgba(255,255,255,.062);
+  border: 1px solid rgba(200,164,93,.38);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  min-height: 462px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.24);
+  backdrop-filter: blur(10px);
+}
+
+.company-card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,0));
+  pointer-events: none;
+  z-index: -1;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(216,184,112,.95);
+  box-shadow: 0 36px 100px rgba(0,0,0,.36);
+}
+
+.featured-company {
+  border-color: rgba(216,184,112,.88);
+  box-shadow: 0 34px 100px rgba(0,0,0,.34), 0 0 0 1px rgba(216,184,112,.18) inset;
+}
+
+.flagship-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: #071a33;
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+
+.company-logo-wrap {
+  height: 158px;
+  border-bottom: 1px solid rgba(200,164,93,.32);
+  margin-bottom: 24px;
+  padding: 18px 14px 22px;
+}
+
+.company-logo-wrap.logo-light {
+  height: 158px;
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,244,236,.96));
+  border: 1px solid rgba(255,255,255,.72);
+  box-shadow: inset 0 0 0 1px rgba(7,26,51,.05);
+}
+
+.company-logo {
+  transition: transform .25s ease;
+}
+
+.company-card:hover .company-logo {
+  transform: scale(1.05);
+}
+
+.caskflow-logo {
+  max-height: 152px;
+  transform: scale(1.22);
+}
+
+.company-card:hover .caskflow-logo {
+  transform: scale(1.28);
+}
+
+.anchor-logo {
+  max-height: 128px;
+}
+
+.whisky-trade-logo {
+  max-height: 134px;
+}
+
+.delek-logo {
+  max-height: 130px;
+}
+
+.multi-logo {
+  max-width: 94%;
+  max-height: 112px;
+}
+
+.kindergarten-logo {
+  max-width: 94%;
+  max-height: 104px;
+}
+
+.company-sector {
+  margin-bottom: 11px;
+}
+
+.company-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.05;
+  margin-bottom: 13px;
+}
+
+.company-card p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.company-roles {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.company-roles span {
+  display: inline-flex;
+  color: #071a33;
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.investment-philosophy {
+  margin-top: 28px;
+  padding: 30px 34px;
+  border-radius: 24px;
+  border: 1px solid rgba(200,164,93,.36);
+  background: rgba(255,255,255,.052);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.investment-philosophy h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #fff;
+  font-size: 34px;
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+.investment-philosophy p {
+  max-width: 920px;
+  margin: 0 auto;
+  color: rgba(255,255,255,.78);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.investment-focus {
+  margin-top: 18px;
+}
+
+@media (max-width: 980px) {
+  .company-logo-wrap,
+  .company-logo-wrap.logo-light {
+    height: 150px;
+  }
+
+  .company-roles {
+    justify-content: center;
+  }
+
+  .flagship-badge {
+    position: static;
+    width: fit-content;
+    margin: 0 auto 14px;
+  }
+
+  .portfolio-sector-strip span {
+    font-size: 11px;
+  }
+
+  .investment-philosophy {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 620px) {
+  .portfolio-v2-head h2 {
+    font-size: 38px;
+  }
+
+  .portfolio-v2-head p {
+    font-size: 16px;
+  }
+
+  .company-card {
+    padding: 24px;
+  }
+
+  .company-card h3 {
+    font-size: 27px;
+  }
+
+  .company-logo-wrap,
+  .company-logo-wrap.logo-light {
+    height: 138px;
+  }
+
+  .caskflow-logo {
+    max-height: 130px;
+  }
+
+  .company-card:hover,
+  .photo-activities .activity:hover {
+    transform: none;
+  }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -558,33 +833,47 @@
       <div class="container">
         <div class="portfolio-v2-head">
           <div class="portfolio-kicker">Blue Season International</div>
-          <h2>Portfolio Companies &amp; Strategic Investments</h2>
+          <h2>Portfolio Companies<br><span>&amp; Strategic Investments</span></h2>
           <p>
             Blue Season International builds long-term value through strategic equity investments
             in high-quality companies and income-producing assets across multiple industries.
           </p>
+          <div class="portfolio-sector-strip" aria-label="Investment sectors">
+            <span>Financial Services</span>
+            <span>Commercial Real Estate</span>
+            <span>Alternative Investments</span>
+            <span>Energy</span>
+            <span>Education</span>
+          </div>
         </div>
 
         <div class="portfolio-v2-grid">
 
           <article class="company-card featured-company">
+            <div class="flagship-badge">Flagship Investment</div>
             <div class="company-logo-wrap">
               <img class="company-logo caskflow-logo" src="assets/portfolio/caskflow-logo.png" alt="Cask Flow Limited logo">
             </div>
             <div class="company-sector">Alternative Investments</div>
             <h3>Cask Flow Limited</h3>
             <p>A Scotland-based whisky cask investment and brokerage company specializing in professionally managed Scotch whisky cask ownership.</p>
-            <div class="company-role">Co-Founder &amp; Strategic Shareholder</div>
+            <div class="company-roles" aria-label="Blue Season role">
+              <span>Co-Founder</span>
+              <span>Strategic Shareholder</span>
+            </div>
           </article>
 
           <article class="company-card">
-            <div class="company-logo-wrap">
-              <img class="company-logo" src="assets/portfolio/anchor-yields-logo.jpg" alt="Anchor Yields Ltd. logo">
+            <div class="company-logo-wrap logo-light">
+              <img class="company-logo anchor-logo" src="assets/portfolio/anchor-yields-logo.png" alt="Anchor Yields Ltd. logo">
             </div>
             <div class="company-sector">Financial Services</div>
             <h3>Anchor Yields Ltd.</h3>
             <p>Providing structured financial solutions and alternative investment opportunities with a focus on disciplined risk management and long-term capital preservation.</p>
-            <div class="company-role">Founder &amp; Shareholder</div>
+            <div class="company-roles" aria-label="Blue Season role">
+              <span>Founder</span>
+              <span>Shareholder</span>
+            </div>
           </article>
 
           <article class="company-card">
@@ -594,7 +883,9 @@
             <div class="company-sector">Alternative Investments</div>
             <h3>Whisky Trade</h3>
             <p>Whisky cask trading and investment activity focused on the acquisition, management, and trading of premium Scotch whisky casks.</p>
-            <div class="company-role">Shareholder</div>
+            <div class="company-roles" aria-label="Blue Season role">
+              <span>Shareholder</span>
+            </div>
           </article>
 
           <article class="company-card">
@@ -604,7 +895,9 @@
             <div class="company-sector">Energy &amp; Commercial Real Estate</div>
             <h3>Shenkar 8 Petah Tikva Fuel Station Ltd.</h3>
             <p>Strategic equity investment in a commercial fuel station, representing a long-term income-producing real estate asset within Israel's energy sector.</p>
-            <div class="company-role">Shareholder</div>
+            <div class="company-roles" aria-label="Blue Season role">
+              <span>Shareholder</span>
+            </div>
           </article>
 
           <article class="company-card">
@@ -614,7 +907,9 @@
             <div class="company-sector">Commercial Real Estate</div>
             <h3>The Eighth Floor Ltd.</h3>
             <p>Strategic equity investment in The Eighth Floor Ltd., owner of the entire eighth floor within the Multi office development in Yehud-Monosson, developed by Gabay Group.</p>
-            <div class="company-role">Shareholder</div>
+            <div class="company-roles" aria-label="Blue Season role">
+              <span>Shareholder</span>
+            </div>
           </article>
 
           <article class="company-card">
@@ -624,9 +919,19 @@
             <div class="company-sector">Education &amp; Compliance</div>
             <h3>The Company for Supervision of Private Kindergartens in Israel Ltd.</h3>
             <p>Providing professional supervision, quality assurance, operational support, and regulatory services for private childcare centers across Israel.</p>
-            <div class="company-role">Strategic Shareholder</div>
+            <div class="company-roles" aria-label="Blue Season role">
+              <span>Strategic Shareholder</span>
+            </div>
           </article>
 
+        </div>
+
+        <div class="investment-philosophy">
+          <h3>Investment Philosophy</h3>
+          <p>
+            Blue Season International invests with a long-term perspective, focusing on high-quality businesses,
+            strategic partnerships, and income-producing assets that create sustainable value across multiple industries.
+          </p>
         </div>
 
         <div class="investment-focus">
@@ -634,7 +939,7 @@
           <strong>Commercial Real Estate</strong>
           <strong>Financial Services</strong>
           <strong>Alternative Investments</strong>
-          <strong>Energy</strong>
+          <strong>Energy Infrastructure</strong>
           <strong>Education</strong>
           <strong>International Growth</strong>
         </div>
