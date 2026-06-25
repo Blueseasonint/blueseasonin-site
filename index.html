@@ -225,20 +225,20 @@
     .portfolio-v2-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 26px;
     }
 
     .company-card {
       position: relative;
-      background: rgba(255,255,255,.055);
-      border: 1px solid rgba(200,164,93,.42);
-      border-radius: 26px;
-      padding: 28px;
-      box-shadow: 0 28px 74px rgba(0,0,0,.24);
-      min-height: 500px;
+      background: rgba(255,255,255,.052);
+      border: 1px solid rgba(200,164,93,.46);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 30px 82px rgba(0,0,0,.25);
+      min-height: 535px;
       display: flex;
       flex-direction: column;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
       transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease, background .24s ease;
     }
 
@@ -250,45 +250,50 @@
     }
 
     .featured-company {
-      background: linear-gradient(135deg, rgba(13,58,49,.94), rgba(6,20,38,.97));
-      border-color: rgba(216,184,112,.86);
-      box-shadow: 0 32px 90px rgba(0,0,0,.34), 0 0 0 1px rgba(216,184,112,.12);
+      background:
+        radial-gradient(circle at 22% 15%, rgba(216,184,112,.13), transparent 36%),
+        linear-gradient(135deg, rgba(13,58,49,.96), rgba(6,20,38,.98));
+      border-color: rgba(216,184,112,.92);
+      box-shadow: 0 34px 98px rgba(0,0,0,.38), 0 0 0 1px rgba(216,184,112,.18), 0 0 48px rgba(200,164,93,.10);
     }
 
     .featured-label {
-      position: absolute;
-      top: 18px;
-      left: 22px;
+      position: relative;
       z-index: 2;
+      width: fit-content;
       background: linear-gradient(135deg, var(--gold), var(--gold-2));
       color: var(--navy);
       border-radius: 999px;
-      padding: 7px 12px;
+      padding: 8px 13px;
       font-size: 11px;
       line-height: 1;
       font-weight: 900;
       letter-spacing: .08em;
       text-transform: uppercase;
       box-shadow: 0 12px 28px rgba(0,0,0,.18);
+      margin-bottom: 14px;
     }
 
     .company-logo-wrap {
-      height: 205px;
+      height: 245px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 24px;
-      padding: 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,244,236,.96));
-      border: 1px solid rgba(200,164,93,.24);
-      border-radius: 18px;
-      box-shadow: inset 0 0 0 1px rgba(7,26,51,.05), 0 18px 38px rgba(0,0,0,.12);
+      margin-bottom: 28px;
+      padding: 18px 20px;
+      background: linear-gradient(180deg, #fbfaf6 0%, #f1eee6 100%);
+      border: 1px solid rgba(200,164,93,.30);
+      border-radius: 20px;
+      box-shadow: inset 0 0 0 1px rgba(7,26,51,.045), 0 18px 42px rgba(0,0,0,.14);
+      overflow: hidden;
     }
 
     .company-logo {
       display: block;
-      max-width: 96%;
-      max-height: 165px;
+      width: auto;
+      height: auto;
+      max-width: 98%;
+      max-height: 205px;
       object-fit: contain;
       transition: transform .24s ease;
     }
@@ -298,33 +303,33 @@
     }
 
     .caskflow-logo {
-      max-height: 190px;
-      max-width: 98%;
+      max-height: 228px;
+      max-width: 99%;
     }
 
     .anchor-logo {
-      max-height: 185px;
-      max-width: 96%;
+      max-height: 228px;
+      max-width: 98%;
     }
 
     .whisky-trade-logo {
-      max-height: 172px;
-      max-width: 88%;
+      max-height: 205px;
+      max-width: 92%;
     }
 
     .delek-logo {
-      max-height: 170px;
-      max-width: 82%;
+      max-height: 205px;
+      max-width: 86%;
     }
 
     .multi-logo {
-      max-height: 150px;
-      max-width: 98%;
+      max-height: 188px;
+      max-width: 99%;
     }
 
     .kindergarten-logo {
-      max-height: 175px;
-      max-width: 98%;
+      max-height: 208px;
+      max-width: 99%;
     }
 
     .company-sector {
@@ -333,13 +338,13 @@
       letter-spacing: .11em;
       font-size: 12px;
       font-weight: 900;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .company-card h3 {
       font-family: 'Cormorant Garamond', serif;
       color: #fff;
-      font-size: 30px;
+      font-size: 29px;
       font-weight: 700;
       line-height: 1.08;
       margin: 0 0 14px;
@@ -347,10 +352,10 @@
     }
 
     .company-card p {
-      color: rgba(255,255,255,.80);
+      color: rgba(255,255,255,.82);
       font-size: 15px;
-      line-height: 1.68;
-      margin: 0 0 22px;
+      line-height: 1.7;
+      margin: 0 0 24px;
     }
 
     .company-badges {
@@ -484,6 +489,11 @@
       .activities-grid, .ventures-grid, .media-grid, .principles-panel, .form-row, .contact-details, .hero-metrics { grid-template-columns:1fr; }
       .card, .portfolio-card, .contact-box, .principles-panel { padding:26px; }
       .timeline-item { grid-template-columns:1fr; gap:6px; }
+
+      .company-logo-wrap { height: 190px; padding: 16px; }
+      .caskflow-logo, .anchor-logo { max-height: 178px; max-width: 99%; }
+      .kindergarten-logo { max-height: 168px; max-width: 99%; }
+      .multi-logo { max-height: 150px; }
     }
 .lang-switch{border:1px solid rgba(255,255,255,.35);padding:8px 13px;border-radius:999px;font-weight:800}.lang-switch:hover{border-color:var(--gold);color:var(--gold)!important}
 
