@@ -37,10 +37,64 @@
   }
 
   /* "22+ years" stays correct every year */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var years = doc.querySelectorAll('[data-since]');
   for (var i = 0; i < years.length; i++) {
-    var since = parseInt(years[i].getAttribute('data-since'), 10);
-    if (since) years[i].textContent = (new Date().getFullYear() - since) + '+';
+    (function (el) {
+      var since = parseInt(el.getAttribute('data-since'), 10);
+      if (!since) return;
+      var target = new Date().getFullYear() - since;
+      if (reduce || !window.requestAnimationFrame) { el.textContent = target + '+'; return; }
+      var start = null, dur = 1400;
+      var step = function (t) {
+        if (start === null) start = t;
+        var k = Math.min((t - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - k, 3);
+        el.textContent = Math.round(target * eased) + '+';
+        if (k < 1) window.requestAnimationFrame(step);
+      };
+      el.textContent = '0+';
+      window.requestAnimationFrame(step);
+    })(years[i]);
+  }
+
+  /* Scroll progress bar */
+  if (!reduce) {
+    var bar = doc.createElement('div');
+    bar.className = 'scroll-progress';
+    bar.setAttribute('aria-hidden', 'true');
+    doc.body.appendChild(bar);
+    var ticking = false;
+    var update = function () {
+      var h = doc.documentElement.scrollHeight - window.innerHeight;
+      bar.style.setProperty('--p', h > 0 ? Math.min(window.scrollY / h, 1).toFixed(4) : 0);
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+
+  /* Reveal on scroll */
+  if (!reduce && 'IntersectionObserver' in window) {
+    var sel = '.section-head, .about-image, .about-text, .timeline-item, .activity, .principle, ' +
+              '.leader-visual, .leader-text, .portfolio-v2-head, .company-card, .investment-focus, ' +
+              '.investment-philosophy, .media-card, .contact-box, .contact-details, .metric, .intro-card, .press-grid > *';
+    var items = doc.querySelectorAll(sel);
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    for (var j = 0; j < items.length; j++) {
+      var node = items[j];
+      var siblings = node.parentElement ? node.parentElement.children : [];
+      var idx = Array.prototype.indexOf.call(siblings, node);
+      node.style.setProperty('--d', (Math.min(Math.max(idx, 0), 5) * 0.08).toFixed(2) + 's');
+      node.classList.add('reveal');
+      io.observe(node);
+    }
   }
 
   /* Prevent double submit */
