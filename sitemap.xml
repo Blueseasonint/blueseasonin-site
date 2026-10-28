@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://blueseasonint.com/</loc>
-</url>
-
-<url>
-<loc>https://blueseasonint.com/index-he.html</loc>
-</url>
-
-<url>
-<loc>https://blueseasonint.com/media.html</loc>
-</url>
-
-<url>
-<loc>https://blueseasonint.com/media-he.html</loc>
-</url>
-
-<url>
-<loc>https://blueseasonint.com/guy-koubbi.html</loc>
-</url>
-
-<url>
-<loc>https://blueseasonint.com/guy-koubbi-he.html</loc>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://blueseasonint.com/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/index-he.html"/>
+  </url>
+  <url>
+    <loc>https://blueseasonint.com/index-he.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/index-he.html"/>
+  </url>
+  <url>
+    <loc>https://blueseasonint.com/media.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/media.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/media-he.html"/>
+  </url>
+  <url>
+    <loc>https://blueseasonint.com/media-he.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/media.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/media-he.html"/>
+  </url>
+  <url>
+    <loc>https://blueseasonint.com/guy-koubbi.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/guy-koubbi.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/guy-koubbi-he.html"/>
+  </url>
+  <url>
+    <loc>https://blueseasonint.com/guy-koubbi-he.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/guy-koubbi.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/guy-koubbi-he.html"/>
+  </url>
 </urlset>
