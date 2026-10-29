@@ -1,0 +1,13 @@
+{
+  "name": "Blue Season International Ltd.",
+  "short_name": "Blue Season",
+  "description": "Private investment and business development company, established in Israel in 2004.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#071a33",
+  "theme_color": "#071a33",
+  "icons": [
+    { "src": "/assets/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
