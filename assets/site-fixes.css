@@ -261,3 +261,10 @@ footer .footer-disclaimer { grid-column: 1 / -1; flex-basis: auto; max-width: no
 @media (max-width: 980px) { footer .footer-inner { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
 @media (max-width: 620px) { footer .footer-inner { grid-template-columns: 1fr; gap: 24px; } }
 @media print { .press-strip, footer nav { display: none !important; } }
+
+/* ---- Featured card: logo sits directly on the dark green card (no cream plate) ---- */
+.production-card .premium-logo-panel.logo-on-dark {
+  background: radial-gradient(ellipse at 50% 45%, rgba(216,184,112,.14), transparent 68%);
+  border-color: rgba(216,184,112,.28); box-shadow: none; padding: 14px 18px;
+}
+.logo-on-dark .logo-caskflow { max-width: 94%; max-height: 190px; filter: drop-shadow(0 6px 18px rgba(0,0,0,.35)); }
