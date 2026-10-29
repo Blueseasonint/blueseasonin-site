@@ -213,3 +213,51 @@ html[dir="rtl"] .scroll-progress { transform-origin: right center; }
 
 /* "22+" must not render as "+22" in RTL */
 html[dir="rtl"] .metric strong { direction: ltr; text-align: right; }
+
+/* =====================================================================
+   VISUAL POLISH (round 3)
+   ===================================================================== */
+
+/* ---- Editorial coverage strip under the hero ---- */
+.press-strip { background: #fff; border-bottom: 1px solid rgba(7,26,51,.08); padding: 26px 0; }
+.press-strip .container { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px 52px; }
+.press-strip-label { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #677386; }
+html[lang="he"] .press-strip-label { letter-spacing: .04em; font-size: 13px; }
+.press-strip a { display: flex; align-items: center; height: 34px; }
+.press-strip img { height: 100%; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: .72; transition: filter .3s ease, opacity .3s ease; }
+.press-strip a:hover img, .press-strip a:focus-visible img { filter: none; opacity: 1; }
+@media (hover: none) { .press-strip img { filter: none; opacity: 1; } }
+@media (max-width: 620px) { .press-strip { padding: 20px 0; } .press-strip .container { gap: 14px 30px; } .press-strip a { height: 28px; } }
+
+/* ---- Hero metrics stay compact (3 across) on phones ---- */
+@media (max-width: 620px) {
+  .hero-metrics { grid-template-columns: repeat(3, 1fr); margin-top: 26px; }
+  .hero-metrics .metric { padding: 14px 10px; }
+  .hero-metrics .metric strong { font-size: 22px; }
+  .hero-metrics .metric span { font-size: 12px; line-height: 1.35; display: block; }
+}
+
+/* ---- Floating WhatsApp: only after the hero, hidden while the form is on screen ---- */
+.js .fab-whatsapp { opacity: 0; transform: translateY(14px); pointer-events: none; transition: opacity .25s ease, transform .25s ease; }
+.js .fab-whatsapp.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+
+/* ---- Contact heading rhythm ---- */
+.contact-box h2 { line-height: 1.15; }
+
+/* ---- Footer ---- */
+footer .footer-inner { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 30px 48px; align-items: start; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-brand img { width: 56px; height: 56px; object-fit: contain; border-radius: 50%; background: rgba(255,255,255,.06); padding: 3px; box-shadow: 0 0 0 1px rgba(200,164,93,.28); }
+.footer-brand strong { display: block; font-size: 16px; }
+.footer-brand span { display: block; font-size: 13px; color: rgba(255,255,255,.66); line-height: 1.5; }
+.footer-col-title { display: block; margin-bottom: 10px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #c8a45d; }
+html[lang="he"] .footer-col-title { letter-spacing: .03em; font-size: 13px; }
+.footer-links { display: grid; gap: 6px; }
+.footer-links a { color: rgba(255,255,255,.82); transition: color .2s ease; }
+.footer-links a:hover, .footer-links a:focus-visible { color: #d8b870; }
+.footer-nav-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+footer .footer-disclaimer { grid-column: 1 / -1; flex-basis: auto; max-width: none; margin: 4px 0 0; }
+.footer-copy { grid-column: 1 / -1; font-size: 13px; color: rgba(255,255,255,.6); }
+@media (max-width: 980px) { footer .footer-inner { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+@media (max-width: 620px) { footer .footer-inner { grid-template-columns: 1fr; gap: 24px; } }
+@media print { .press-strip, footer nav { display: none !important; } }

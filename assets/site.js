@@ -97,6 +97,20 @@
     }
   }
 
+
+  /* Floating WhatsApp button: show after the hero, hide while the contact form is on screen */
+  var fab = doc.querySelector('.fab-whatsapp');
+  if (fab) {
+    var contactEl = doc.getElementById('contact');
+    var contactVisible = false;
+    var syncFab = function () { fab.classList.toggle('is-visible', window.scrollY > 520 && !contactVisible); };
+    if (contactEl && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { contactVisible = en[0].isIntersecting; syncFab(); }, { threshold: 0.15 }).observe(contactEl);
+    }
+    window.addEventListener('scroll', syncFab, { passive: true });
+    syncFab();
+  }
+
   /* Prevent double submit */
   var form = doc.querySelector('.callback-form');
   if (form) {
