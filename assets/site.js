@@ -123,4 +123,15 @@
       if (b) b.disabled = false;
     });
   }
+
+  /* Cursor spotlight on cards */
+  if (window.matchMedia && window.matchMedia('(hover: hover)').matches) {
+    doc.addEventListener('pointermove', function (e) {
+      var c = e.target.closest && e.target.closest('.company-card, .activity, .media-card');
+      if (!c) return;
+      var r = c.getBoundingClientRect();
+      c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
 })();

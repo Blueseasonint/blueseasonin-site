@@ -348,3 +348,50 @@ html[lang="en"] .media-bio h2, html[lang="en"] .section-title { margin-bottom: 1
 .leader-text .name-latin{font-size:.55em;font-weight:500;opacity:.7}
 .leader-text .profile-link{color:var(--gold);font-weight:800;white-space:nowrap}
 .founder-caption a{color:inherit;border-bottom:1px solid rgba(200,164,93,.6)}
+
+/* ---- Round 5: modern touches ---- */
+@view-transition { navigation: auto; }
+::selection { background: rgba(200,164,93,.35); color: inherit; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+html { scrollbar-color: #c8a45d #071a33; scrollbar-width: thin; }
+
+/* Bento layout for activities (desktop) */
+@media (min-width: 981px) {
+  .activities-grid > .activity:nth-child(1),
+  .activities-grid > .activity:nth-child(6),
+  .activities-grid > .activity:nth-child(7),
+  .activities-grid > .activity:nth-child(8) { grid-column: span 2; }
+  .activities-grid > .activity:nth-child(1) .activity-img,
+  .activities-grid > .activity:nth-child(6) .activity-img,
+  .activities-grid > .activity:nth-child(7) .activity-img,
+  .activities-grid > .activity:nth-child(8) .activity-img { height: 210px; }
+}
+.activity { transition: transform .35s ease, box-shadow .35s ease; }
+.activity:hover { transform: translateY(-6px); box-shadow: 0 26px 60px rgba(7,26,51,.14); }
+
+/* Cursor spotlight on cards */
+.company-card, .activity, .media-card { position: relative; }
+.company-card::before, .activity::before, .media-card::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; border-radius: inherit;
+  opacity: 0; transition: opacity .3s ease;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(200,164,93,.16), transparent 60%);
+}
+.company-card:hover::before, .activity:hover::before, .media-card:hover::before { opacity: 1; }
+
+/* Hero headline: line-by-line rise */
+.js .hero h1 span { display: block; opacity: 0; transform: translateY(26px); animation: heroRise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+.js .hero h1 span:nth-child(2) { animation-delay: .22s; }
+@keyframes heroRise { to { opacity: 1; transform: none; } }
+
+/* Hero photo: gentle parallax driven by scroll (progressive enhancement) */
+@supports (animation-timeline: scroll()) {
+  .hero-photo img { animation: heroDrift linear both; animation-timeline: scroll(root); animation-range: 0 700px; }
+  @keyframes heroDrift { to { transform: translateY(40px) scale(1.04); } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero h1 span { opacity: 1; transform: none; animation: none; }
+  .hero-photo img { animation: none; }
+  @view-transition { navigation: none; }
+}
