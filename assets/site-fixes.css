@@ -331,3 +331,20 @@ html[lang="he"] #portfolio .portfolio-v2-head h2 { font-size: clamp(36px, 4.2vw,
 html[lang="en"] .media-bio h2 { font-size: clamp(34px, 4vw, 52px); }
 
 html[lang="en"] .media-bio h2, html[lang="en"] .section-title { margin-bottom: 16px; }
+
+/* SEO profile block + name links */
+.profile-facts{padding:64px 0;background:#f6f3ec}
+.profile-facts h2{font-size:clamp(26px,3.2vw,36px);margin:0 0 20px;color:#071a33}
+.profile-facts h2:not(:first-child){margin-top:48px}
+.profile-facts h3{font-size:19px;margin:22px 0 6px;color:#071a33}
+.profile-facts p{margin:0 0 6px;color:#2a3a52;max-width:760px}
+.profile-facts a{color:#8a6a24;border-bottom:1px solid rgba(138,106,36,.5)}
+.profile-facts .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0}
+.profile-facts .facts>div{background:#fff;border:1px solid rgba(7,26,51,.1);border-radius:14px;padding:16px 18px}
+.profile-facts dt{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8a6a24;font-weight:800;margin-bottom:4px}
+.profile-facts dd{margin:0;color:#071a33;font-weight:600}
+.leader-text h2 a{color:inherit;border:0}
+.leader-text h2 a:hover{color:var(--gold)}
+.leader-text .name-latin{font-size:.55em;font-weight:500;opacity:.7}
+.leader-text .profile-link{color:var(--gold);font-weight:800;white-space:nowrap}
+.founder-caption a{color:inherit;border-bottom:1px solid rgba(200,164,93,.6)}
