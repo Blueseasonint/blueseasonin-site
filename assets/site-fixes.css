@@ -395,3 +395,6 @@ html { scrollbar-color: #c8a45d #071a33; scrollbar-width: thin; }
   .hero-photo img { animation: none; }
   @view-transition { navigation: none; }
 }
+
+/* Text wordmark for publishers without a logo file */
+.publisher-wordmark{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:30px;letter-spacing:.04em;color:#071a33}
