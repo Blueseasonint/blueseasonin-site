@@ -398,3 +398,8 @@ html { scrollbar-color: #c8a45d #071a33; scrollbar-width: thin; }
 
 /* Text wordmark for publishers without a logo file */
 .publisher-wordmark{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:30px;letter-spacing:.04em;color:#071a33}
+
+/* Center publisher logos inside their cells */
+.publisher-logo-wrap { display: flex !important; align-items: center !important; justify-content: center !important; }
+.publisher-logo-wrap .publisher-logo { margin: 0 auto; object-position: center; }
+.publisher-logo-wrap { padding: 14px 0 !important; box-sizing: content-box; }
