@@ -6,6 +6,8 @@ Usage:  python3 tools/build_media.py          (rewrite files)
 
 Each page contains a block delimited by:
     <!-- MEDIA:START -->  ...generated...  <!-- MEDIA:END -->
+and, on media.html / media-he.html, also a JSON-LD block in <head>:
+    <!-- MEDIA-LD:START -->  ...generated...  <!-- MEDIA-LD:END -->
 Never edit inside those markers by hand; edit data/media.json instead.
 """
 import json, re, sys, html
@@ -57,6 +59,65 @@ def build(page, cfg):
     return f"<!-- MEDIA:START -->\n{body}\n<!-- MEDIA:END -->"
 
 
+LD_PAGES = {
+    "media.html": {
+        "lang": "en",
+        "url": "https://blueseasonint.com/media.html",
+        "name": "Media & Recognition",
+        "crumbs": ["Blue Season International", "Media & Recognition"],
+        "home": "https://blueseasonint.com/",
+    },
+    "media-he.html": {
+        "lang": "he",
+        "url": "https://blueseasonint.com/media-he.html",
+        "name": "מדיה ופרסומים",
+        "crumbs": ["בלו סיזן אינטרנשיונל", "מדיה ופרסומים"],
+        "home": "https://blueseasonint.com/index-he.html",
+    },
+}
+
+
+def build_ld(page):
+    c = LD_PAGES[page]
+    lang = c["lang"]
+    graph = [
+        {
+            "@type": "BreadcrumbList",
+            "@id": c["url"] + "#breadcrumb",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": c["crumbs"][0], "item": c["home"]},
+                {"@type": "ListItem", "position": 2, "name": c["crumbs"][1], "item": c["url"]},
+            ],
+        },
+        {
+            "@type": "CollectionPage",
+            "@id": c["url"] + "#webpage",
+            "url": c["url"],
+            "name": c["name"],
+            "inLanguage": lang,
+            "about": {"@type": "Person", "name": "Guy Koubbi", "alternateName": "גיא קובי"},
+            "isPartOf": {"@type": "WebSite", "url": "https://blueseasonint.com/"},
+            "breadcrumb": {"@id": c["url"] + "#breadcrumb"},
+            "mainEntity": {
+                "@type": "ItemList",
+                "numberOfItems": len(DATA),
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": i + 1,
+                        "name": it[lang]["title"],
+                        "url": it["url"],
+                    }
+                    for i, it in enumerate(DATA)
+                ],
+            },
+        },
+    ]
+    blob = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=2)
+    blob = blob.replace("</", "<\\/")
+    return f'<!-- MEDIA-LD:START -->\n<script type="application/ld+json">\n{blob}\n</script>\n<!-- MEDIA-LD:END -->'
+
+
 def main():
     check = "--check" in sys.argv
     stale = []
@@ -66,6 +127,10 @@ def main():
         new, n = re.subn(r"<!-- MEDIA:START -->.*?<!-- MEDIA:END -->", lambda m: build(page, cfg), s, flags=re.S)
         if n != 1:
             sys.exit(f"{page}: expected exactly one MEDIA block, found {n}")
+        if page in LD_PAGES:
+            new, n2 = re.subn(r"<!-- MEDIA-LD:START -->.*?<!-- MEDIA-LD:END -->", lambda m: build_ld(page), new, flags=re.S)
+            if n2 != 1:
+                sys.exit(f"{page}: expected exactly one MEDIA-LD block, found {n2}")
         if new != s:
             stale.append(page)
             if not check:
