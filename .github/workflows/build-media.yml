@@ -1,0 +1,33 @@
+name: Rebuild media lists
+
+# When data/media.json (or the build script) changes, regenerate the press
+# lists in index.html, index-he.html, media.html and media-he.html and commit.
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/media.json
+      - tools/build_media.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: python3 tools/build_media.py
+      - name: Commit regenerated pages
+        run: |
+          if git diff --quiet; then
+            echo "Pages already in sync."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html index-he.html media.html media-he.html
+          git commit -m "Rebuild media lists from data/media.json"
+          git push

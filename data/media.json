@@ -1,0 +1,247 @@
+{
+  "_note": "Single source for all press items. Edit here, then the build regenerates index.html, index-he.html, media.html, media-he.html. Order = display order.",
+  "items": [
+    {
+      "id": "spotit-1",
+      "url": "https://spotit.co.il/p/102074",
+      "sponsored": true,
+      "logo": {
+        "src": "assets/media/spotit.webp",
+        "width": 451,
+        "height": 187
+      },
+      "name": {
+        "he": "Spotit",
+        "en": "Spotit"
+      },
+      "he": {
+        "title": "פעם זה היה שמור לאצולה: להשקיע בחבית ויסקי מ-20 אלף שקל",
+        "desc": "כתבה (יח״צ) ב-Spotit על גיא קובי, בלו סיזן ועוגן תשואה – וויסקי טרייד והשקעה בחביות וויסקי סקוטי."
+      },
+      "en": {
+        "title": "Once reserved for aristocracy: investing in a whisky cask from NIS 20,000",
+        "desc": "Promotional feature (PR) on Spotit about Guy Koubbi, Blue Season and Whisky Trade, and investing in Scotch whisky casks."
+      }
+    },
+    {
+      "id": "israelnews-2",
+      "url": "https://israelnews.co.il/?p=26657",
+      "sponsored": false,
+      "logo": {
+        "src": "assets/media/israelnews.webp",
+        "width": 218,
+        "height": 100
+      },
+      "name": {
+        "he": "Israel News",
+        "en": "Israel News"
+      },
+      "he": {
+        "title": "זהב נוזלי בסקוטלנד: השקעה בחביות וויסקי",
+        "desc": "סיקור הקמת Cask Flow Limited בידי גיא קובי ורפי גולן, בעלות ישירה על חביות ואחסונן בסקוטלנד."
+      },
+      "en": {
+        "title": "Liquid Gold in Scotland: Whisky Cask Investment",
+        "desc": "Coverage of Cask Flow Limited, founded by Guy Koubbi and Rafi Golan, direct cask ownership and storage in Scotland."
+      }
+    },
+    {
+      "id": "itnews-3",
+      "url": "https://itnews.co.il/news/?p=57469",
+      "sponsored": false,
+      "logo": {
+        "src": "assets/media/itnews.webp",
+        "width": 250,
+        "height": 78
+      },
+      "name": {
+        "he": "IT News",
+        "en": "IT News"
+      },
+      "he": {
+        "title": "גיא קובי והקמת Cask Flow Limited בסקוטלנד",
+        "desc": "כתבה על הקמת הברוקראז׳ בסקוטלנד, פעילות וויסקי טרייד במסחר בחביות וליווי משקיעים."
+      },
+      "en": {
+        "title": "Guy Koubbi and the Launch of Cask Flow Limited in Scotland",
+        "desc": "An article on the launch of the Scottish brokerage, Whisky Trade’s cask trading activities and investor support."
+      }
+    },
+    {
+      "id": "thepulse-4",
+      "url": "https://thepulse.co.il/index.php/67420-promoted-20261020-091701",
+      "sponsored": true,
+      "logo": {
+        "src": "assets/media/thepulse.webp",
+        "width": 300,
+        "height": 60
+      },
+      "name": {
+        "he": "The-Pulse",
+        "en": "The-Pulse"
+      },
+      "he": {
+        "title": "וויסקי טרייד הקימה ברוקראז׳ בסקוטלנד",
+        "desc": "סיקור הקמת Cask Flow Limited ומודל הפעילות של עוגן תשואה – וויסקי טרייד, בדגש על בעלות ושקיפות."
+      },
+      "en": {
+        "title": "Whisky Trade Establishes a Brokerage in Scotland",
+        "desc": "Coverage of Cask Flow Limited and the Anchor Yields–Whisky Trade business model, with a focus on ownership and transparency."
+      }
+    },
+    {
+      "id": "ice-5",
+      "url": "https://www.ice.co.il/finance/news/article/1134398",
+      "sponsored": false,
+      "logo": {
+        "src": "assets/media/ice.webp",
+        "width": 344,
+        "height": 228
+      },
+      "name": {
+        "he": "ice",
+        "en": "ice"
+      },
+      "he": {
+        "title": "החברה הישראלית שמציעה להשקיע בוויסקי",
+        "desc": "כתבה על פעילות עוגן תשואה – וויסקי טרייד בסקוטלנד, תהליך הרכישה והבעלות, אופק ההשקעה והסיכונים."
+      },
+      "en": {
+        "title": "The Israeli Company Offering Whisky Cask Investment",
+        "desc": "An article on Anchor Yields–Whisky Trade’s Scottish operations, the purchase and ownership process, investment horizon and risks."
+      }
+    },
+    {
+      "id": "maariv-6",
+      "url": "https://www.maariv.co.il/economy/israel/article-1379315",
+      "sponsored": false,
+      "logo": {
+        "src": "assets/media/maariv.svg",
+        "width": null,
+        "height": null
+      },
+      "name": {
+        "he": "מעריב",
+        "en": "Maariv"
+      },
+      "he": {
+        "title": "אוצר בחבית: השקעה בחביות וויסקי סקוטי",
+        "desc": "כתבה על התרחבות הפעילות בסקוטלנד והקמת Cask Flow Limited, לצד תקופת ההחזקה והסיכונים בהשקעה בחביות."
+      },
+      "en": {
+        "title": "Treasure in a Cask: Investing in Scotch Whisky",
+        "desc": "Coverage of the expansion in Scotland and the establishment of Cask Flow Limited, alongside cask holding periods and investment risks."
+      }
+    },
+    {
+      "id": "channel22-7",
+      "url": "https://channel22.co.il/investing-in-scotch-whiskey-casks/",
+      "sponsored": false,
+      "logo": {
+        "src": "assets/media/channel22.webp",
+        "width": 380,
+        "height": 240
+      },
+      "name": {
+        "he": "Channel22",
+        "en": "Channel22"
+      },
+      "he": {
+        "title": "השקעה בחביות וויסקי סקוטי מגיעה לישראל",
+        "desc": "כתבה על כניסת עוגן תשואה ופלטפורמת Whisky Trade לשוק הישראלי, תהליך היישון, האחסון וליווי המשקיעים."
+      },
+      "en": {
+        "title": "Scotch Whisky Cask Investment Comes to Israel",
+        "desc": "An article on Anchor Yields and Whisky Trade’s entry into the Israeli market, whisky maturation, cask storage and investor support."
+      }
+    },
+    {
+      "id": "ba-media-8",
+      "url": "https://ba-media.co.il/whisky-trade/",
+      "sponsored": true,
+      "logo": {
+        "src": "assets/media/bamedia.webp",
+        "width": 72,
+        "height": 72
+      },
+      "name": {
+        "he": "BA Media",
+        "en": "BA Media"
+      },
+      "he": {
+        "title": "וויסקי טרייד: חביות וויסקי למשקיעים ישראלים",
+        "desc": "פרסום במדור פרסומי על פעילות וויסקי טרייד, אחסון בסקוטלנד וליווי משקיעים. ההשקעה כרוכה בסיכונים והתשואות אינן מובטחות."
+      },
+      "en": {
+        "title": "Whisky Trade: Whisky Casks for Israeli Investors",
+        "desc": "Promotional coverage of Whisky Trade, storage in Scotland and investor support. The investment carries risks and returns are not guaranteed."
+      }
+    },
+    {
+      "id": "ymag-9",
+      "url": "https://ymag.ynet.co.il/whiskey-ob/",
+      "sponsored": true,
+      "logo": {
+        "src": "assets/media/ymag.webp",
+        "width": 220,
+        "height": 81
+      },
+      "name": {
+        "he": "ynet",
+        "en": "Ynet Magazine"
+      },
+      "he": {
+        "title": "השקעה בנכס מוחשי: חביות וויסקי סקוטי",
+        "desc": "תוכן שיווקי על פעילות Whisky Trade ו־Cask Flow, בעלות על חביות, אחסון וביטוח בסקוטלנד ואפשרויות מימוש."
+      },
+      "en": {
+        "title": "Investing in a Tangible Asset: Scotch Whisky Casks",
+        "desc": "Promotional content on Whisky Trade and Cask Flow, cask ownership, storage and insurance in Scotland, and exit options."
+      }
+    },
+    {
+      "id": "ymag-10",
+      "url": "https://ymag.ynet.co.il/new-invest-1/",
+      "sponsored": true,
+      "logo": {
+        "src": "assets/media/ymag.webp",
+        "width": 220,
+        "height": 81
+      },
+      "name": {
+        "he": "ynet",
+        "en": "Ynet Magazine"
+      },
+      "he": {
+        "title": "אפיק השקעה חדש למשקיע הישראלי",
+        "desc": "תוכן שיווקי על פעילות עוגן תשואה ו־Cask Flow בחביות וויסקי סקוטי, תהליך הרכישה, האחסון והליווי למשקיעים."
+      },
+      "en": {
+        "title": "An Alternative Investment Avenue for Israeli Investors",
+        "desc": "Promotional content on Anchor Yields and Cask Flow’s Scotch whisky cask activities, purchasing, storage and support for Israeli investors."
+      }
+    },
+    {
+      "id": "globes-11",
+      "url": "https://www.globes.co.il/news/article.aspx?did=1000011947",
+      "sponsored": false,
+      "logo": {
+        "src": "assets/media/globes.webp",
+        "width": 380,
+        "height": 104
+      },
+      "name": {
+        "he": "גלובס",
+        "en": "Globes"
+      },
+      "he": {
+        "title": "וודקה במינון הנכון",
+        "desc": "כתבת ארכיון על תחילת דרכו של גיא קובי בענף האלכוהול, הקמת בלו סיזן אינטרנשיונל ויבוא משקאות Red Square לישראל."
+      },
+      "en": {
+        "title": "Vodka in the Right Measure",
+        "desc": "An archive article on Guy Koubbi’s early activity in the spirits industry, the founding of Blue Season International and the import of Red Square drinks to Israel."
+      }
+    }
+  ]
+}
