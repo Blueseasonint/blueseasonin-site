@@ -33,20 +33,26 @@ PAGES = {
 
 def card(it, lang, art_cls, btn_cls, show_source):
     t = LANG[lang]
-    logo = it["logo"]
+    logo = it.get("logo")
     dims = ""
-    if logo.get("width") and logo.get("height"):
+    if logo and logo.get("width") and logo.get("height"):
         dims = f' width="{logo["width"]}" height="{logo["height"]}"'
     name = it["name"][lang]
     title = it[lang]["title"]
     desc = it[lang]["desc"]
     src = f'<div class="source">{E(it["name"]["en"])}</div>' if show_source else ""
+    if logo and logo.get("src"):
+        logo_html = (
+            f'<img{dims} class="publisher-logo" src="{logo["src"]}" alt="{E(name)}" '
+            f'loading="lazy" decoding="async" />'
+        )
+    else:  # no logo file: show the publisher name as a text wordmark
+        logo_html = f'<span class="publisher-name" style="font-weight:800;font-size:20px;letter-spacing:.02em">{E(name)}</span>'
     tag = f'<span class="media-tag">{t["tag"]}</span>' if it.get("sponsored") else ""
     aria_prefix = t["read"].rstrip(":") + ":"
     return (
         f'<article class="{art_cls}"><div>'
-        f'<div class="publisher-logo-wrap"><img{dims} class="publisher-logo" '
-        f'src="{logo["src"]}" alt="{E(name)}" loading="lazy" decoding="async" /></div>'
+        f'<div class="publisher-logo-wrap">{logo_html}</div>'
         f"{src}{tag}<h3>{E(title)}</h3><p>{E(desc)}</p></div>"
         f'<a class="{btn_cls}" href="{E(it["url"])}" target="_blank" rel="noopener noreferrer" '
         f'aria-label="{E(aria_prefix + " " + title)}">{t["read"]}</a></article>'

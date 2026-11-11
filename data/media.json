@@ -2,6 +2,23 @@
   "_note": "Single source for all press items. Edit here, then the build regenerates index.html, index-he.html, media.html, media-he.html. Order = display order.",
   "items": [
     {
+      "id": "adifplus-12",
+      "url": "https://www.adifplus.co.il/%d7%9b%d7%99%d7%a1%d7%95%d7%99-%d7%91%d7%99%d7%98%d7%95%d7%97%d7%99-%d7%97%d7%93%d7%a9-%d7%9c%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%91%d7%95%d7%95%d7%99%d7%a1%d7%a7%d7%99-%d7%94%d7%90%d7%95%d7%93/",
+      "sponsored": false,
+      "name": {
+        "he": "עדיף",
+        "en": "Adif Plus"
+      },
+      "he": {
+        "title": "כיסוי ביטוחי חדש להשקעות בוויסקי: האודן תבטח חביות עם שיפוי של 130% מערך החשבונית",
+        "desc": "גיא קובי, בעלים ומנכ״ל עוגן תשואה – וויסקי טרייד, פעל מול קבוצת האודן הבריטית להנפקת פוליסת כל הסיכונים ייעודית להשקעות בחביות וויסקי."
+      },
+      "en": {
+        "title": "New Insurance Cover for Whisky Investments: Howden to Insure Casks at 130% of Invoice Value",
+        "desc": "Guy Koubbi, owner and CEO of Anchor Yields – Whisky Trade, worked with UK-based Howden Group on a dedicated all-risks policy for whisky cask investments."
+      }
+    },
+    {
       "id": "spotit-1",
       "url": "https://spotit.co.il/p/102074",
       "sponsored": true,
