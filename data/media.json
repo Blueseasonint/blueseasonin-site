@@ -92,7 +92,7 @@
     {
       "id": "thepulse-4",
       "url": "https://thepulse.co.il/index.php/67420-promoted-20261020-091701",
-      "sponsored": true,
+      "sponsored": false,
       "logo": {
         "src": "assets/media/thepulse.webp",
         "width": 300,
