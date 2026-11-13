@@ -403,3 +403,9 @@ html { scrollbar-color: #c8a45d #071a33; scrollbar-width: thin; }
 .publisher-logo-wrap { display: flex !important; align-items: center !important; justify-content: center !important; }
 .publisher-logo-wrap .publisher-logo { margin: 0 auto; object-position: center; }
 .publisher-logo-wrap { padding: 14px 0 !important; box-sizing: content-box; }
+
+/* Channel 10 interview: text wordmark in the press strip (no logo asset on file) */
+.press-strip .press-strip-text span { font-size: 24px; font-weight: 800; line-height: 1; letter-spacing: .01em; color: #677386; opacity: .85; transition: color .3s ease, opacity .3s ease; white-space: nowrap; }
+.press-strip a.press-strip-text:hover span, .press-strip a.press-strip-text:focus-visible span { color: #071a33; opacity: 1; }
+@media (hover: none) { .press-strip .press-strip-text span { color: #071a33; opacity: 1; } }
+@media (max-width: 620px) { .press-strip .press-strip-text span { font-size: 20px; } }
