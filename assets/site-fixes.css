@@ -403,3 +403,9 @@ html { scrollbar-color: #c8a45d #071a33; scrollbar-width: thin; }
 .publisher-logo-wrap { display: flex !important; align-items: center !important; justify-content: center !important; }
 .publisher-logo-wrap .publisher-logo { margin: 0 auto; object-position: center; }
 .publisher-logo-wrap { padding: 14px 0 !important; box-sizing: content-box; }
+
+/* Channel 10 (Economy Channel): logo + visible caption in the press strip */
+.press-strip a.press-strip-channel { gap: 10px; }
+.press-strip-caption { font-size: 13px; font-weight: 800; line-height: 1.2; color: #677386; white-space: nowrap; }
+.press-strip a.press-strip-channel:hover .press-strip-caption, .press-strip a.press-strip-channel:focus-visible .press-strip-caption { color: #071a33; }
+@media (max-width: 620px) { .press-strip-caption { font-size: 12px; } }
