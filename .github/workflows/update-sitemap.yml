@@ -1,0 +1,34 @@
+name: Update sitemap lastmod
+
+# Sets <lastmod> in sitemap.xml to each page's last commit date. Runs when a page changes.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update lastmod
+        run: python3 tools/build_sitemap.py
+      - name: Commit sitemap
+        run: |
+          if git diff --quiet -- sitemap.xml; then
+            echo "Sitemap already in sync."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "Update sitemap lastmod"
+          git pull --rebase origin main
+          git push

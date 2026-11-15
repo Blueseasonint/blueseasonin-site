@@ -409,3 +409,6 @@ html { scrollbar-color: #c8a45d #071a33; scrollbar-width: thin; }
 .press-strip-caption { font-size: 13px; font-weight: 800; line-height: 1.2; color: #677386; white-space: nowrap; }
 .press-strip a.press-strip-channel:hover .press-strip-caption, .press-strip a.press-strip-channel:focus-visible .press-strip-caption { color: #071a33; }
 @media (max-width: 620px) { .press-strip-caption { font-size: 12px; } }
+
+/* hero image served via <picture> (AVIF/WebP, responsive widths): keep the <img> as the layout box */
+.hero-photo picture { display: contents; }

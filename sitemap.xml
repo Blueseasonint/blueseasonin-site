@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://blueseasonint.com/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/index-he.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ZacvRsUEHJQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Guy Koubbi Interviewed Live on Channel 10 (Israel's Economy Channel)</video:title>
+      <video:description>A live studio interview with Guy Koubbi, founder of Blue Season International, on Channel 10 (Israel's Economy Channel), broadcast on 12 November 2026.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ZacvRsUEHJQ</video:player_loc>
+      <video:duration>225</video:duration>
+      <video:publication_date>2026-11-13</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://blueseasonint.com/index-he.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/index-he.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ZacvRsUEHJQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>גיא קובי בראיון בשידור חי בערוץ 10 (ערוץ הכלכלה)</video:title>
+      <video:description>ראיון באולפן ערוץ 10 (ערוץ הכלכלה) עם גיא קובי, מייסד בלו סיזן אינטרנשיונל. שודר ב-12 בנובמבר 2026.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ZacvRsUEHJQ</video:player_loc>
+      <video:duration>225</video:duration>
+      <video:publication_date>2026-11-13</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://blueseasonint.com/media.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/media.html"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/media-he.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ZacvRsUEHJQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Guy Koubbi Interviewed Live on Channel 10 (Israel's Economy Channel)</video:title>
+      <video:description>A live studio interview with Guy Koubbi, founder of Blue Season International, on Channel 10 (Israel's Economy Channel), broadcast on 12 November 2026.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ZacvRsUEHJQ</video:player_loc>
+      <video:duration>225</video:duration>
+      <video:publication_date>2026-11-13</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://blueseasonint.com/media-he.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://blueseasonint.com/media.html"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://blueseasonint.com/media-he.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ZacvRsUEHJQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>גיא קובי בראיון בשידור חי בערוץ 10 (ערוץ הכלכלה)</video:title>
+      <video:description>ראיון באולפן ערוץ 10 (ערוץ הכלכלה) עם גיא קובי, מייסד בלו סיזן אינטרנשיונל. שודר ב-12 בנובמבר 2026.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ZacvRsUEHJQ</video:player_loc>
+      <video:duration>225</video:duration>
+      <video:publication_date>2026-11-13</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://blueseasonint.com/guy-koubbi.html</loc>
