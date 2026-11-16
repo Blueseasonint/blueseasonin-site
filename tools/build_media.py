@@ -17,11 +17,6 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / "data" / "media.json").read_text(encoding="utf-8"))["items"]
 E = lambda s: html.escape(s, quote=True)
 
-# The homepages show only the first HOME_LIMIT items (list order = display order) and link to the
-# full media page; media.html / media-he.html always show everything.
-HOME_LIMIT = 6
-HOME_PAGES = {"index.html", "index-he.html"}
-
 # Publisher logos have very different aspect ratios. Size each one so that its visual weight is
 # similar: height = SIZE / sqrt(aspect), capped so wide wordmarks do not exceed MAX_W / MAX_H.
 LOGO_SIZE, LOGO_MAX_W, LOGO_MAX_H = 84, 180, 58
@@ -77,8 +72,7 @@ def card(it, lang, art_cls, btn_cls, show_source):
 
 def build(page, cfg):
     lang, art, btn, src = cfg
-    items = DATA[:HOME_LIMIT] if page in HOME_PAGES else DATA
-    body = "\n".join(card(it, lang, art, btn, src) for it in items)
+    body = "\n".join(card(it, lang, art, btn, src) for it in DATA)
     return f"<!-- MEDIA:START -->\n{body}\n<!-- MEDIA:END -->"
 
 
