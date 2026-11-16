@@ -139,8 +139,8 @@
       "sponsored": false,
       "logo": {
         "src": "assets/media/maariv.svg",
-        "width": null,
-        "height": null
+        "width": 660,
+        "height": 120
       },
       "name": {
         "he": "מעריב",

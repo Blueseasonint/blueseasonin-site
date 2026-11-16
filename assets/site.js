@@ -134,4 +134,28 @@
       c.style.setProperty('--my', (e.clientY - r.top) + 'px');
     }, { passive: true });
   }
+
+  /* Click-to-play video: swap the thumbnail button for the real YouTube player */
+  var thumbs = doc.querySelectorAll('.yt-thumb');
+  Array.prototype.forEach.call(thumbs, function (img) {
+    var fallback = function () {
+      var f = img.getAttribute('data-fallback');
+      if (f && img.getAttribute('src') !== f) { img.src = f; } else { img.classList.add('is-empty'); }
+    };
+    img.addEventListener('error', fallback);
+    img.addEventListener('load', function () { if (img.naturalWidth && img.naturalWidth <= 160) fallback(); });
+    if (img.complete) { if (!img.naturalWidth || img.naturalWidth <= 160) fallback(); }
+  });
+  doc.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.yt-facade');
+    if (!b) return;
+    var f = doc.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(b.getAttribute('data-yt')) + '?autoplay=1&rel=0&playsinline=1';
+    f.title = b.getAttribute('data-title') || '';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.setAttribute('allowfullscreen', '');
+    f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    b.parentNode.replaceChild(f, b);
+    f.focus();
+  });
 })();

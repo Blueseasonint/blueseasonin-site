@@ -17,6 +17,20 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / "data" / "media.json").read_text(encoding="utf-8"))["items"]
 E = lambda s: html.escape(s, quote=True)
 
+# The homepages show only the first HOME_LIMIT items (list order = display order) and link to the
+# full media page; media.html / media-he.html always show everything.
+HOME_LIMIT = 6
+HOME_PAGES = {"index.html", "index-he.html"}
+
+# Publisher logos have very different aspect ratios. Size each one so that its visual weight is
+# similar: height = SIZE / sqrt(aspect), capped so wide wordmarks do not exceed MAX_W / MAX_H.
+LOGO_SIZE, LOGO_MAX_W, LOGO_MAX_H = 84, 180, 58
+
+
+def logo_height(w, h):
+    aspect = w / h
+    return round(min(LOGO_SIZE / aspect ** 0.5, LOGO_MAX_W / aspect, LOGO_MAX_H))
+
 LANG = {
     "he": {"tag": "תוכן שיווקי", "read": "לקריאת הכתבה"},
     "en": {"tag": "Sponsored content", "read": "Read Article"},
@@ -35,15 +49,17 @@ def card(it, lang, art_cls, btn_cls, show_source):
     t = LANG[lang]
     logo = it.get("logo")
     dims = ""
+    size_style = ""
     if logo and logo.get("width") and logo.get("height"):
         dims = f' width="{logo["width"]}" height="{logo["height"]}"'
+        size_style = f' style="height:{logo_height(logo["width"], logo["height"])}px;width:auto;max-height:none;max-width:none"'
     name = it["name"][lang]
     title = it[lang]["title"]
     desc = it[lang]["desc"]
     src = f'<div class="source">{E(it["name"]["en"])}</div>' if show_source else ""
     if logo and logo.get("src"):
         logo_html = (
-            f'<img{dims} class="publisher-logo" src="{logo["src"]}" alt="{E(name)}" '
+            f'<img{dims}{size_style} class="publisher-logo" src="{logo["src"]}" alt="{E(name)}" '
             f'loading="lazy" decoding="async" />'
         )
     else:  # no logo file: show the publisher name as a text wordmark
@@ -61,7 +77,8 @@ def card(it, lang, art_cls, btn_cls, show_source):
 
 def build(page, cfg):
     lang, art, btn, src = cfg
-    body = "\n".join(card(it, lang, art, btn, src) for it in DATA)
+    items = DATA[:HOME_LIMIT] if page in HOME_PAGES else DATA
+    body = "\n".join(card(it, lang, art, btn, src) for it in items)
     return f"<!-- MEDIA:START -->\n{body}\n<!-- MEDIA:END -->"
 
 

@@ -412,3 +412,23 @@ html { scrollbar-color: #c8a45d #071a33; scrollbar-width: thin; }
 
 /* hero image served via <picture> (AVIF/WebP, responsive widths): keep the <img> as the layout box */
 .hero-photo picture { display: contents; }
+
+/* Interview video: thumbnail + play button; the YouTube iframe is only created on click (see site.js) */
+.yt-player .yt-facade { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; margin: 0; background: transparent; cursor: pointer; display: block; color: inherit; font: inherit; }
+.yt-player .yt-thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.yt-player .yt-thumb.is-empty { display: none; }
+.yt-player .yt-facade::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(7,26,51,.08) 0%, rgba(7,26,51,.5) 100%); transition: opacity .25s ease; }
+.yt-player .yt-play { position: absolute; z-index: 2; left: 50%; top: 50%; width: 78px; height: 78px; margin: -39px 0 0 -39px; border-radius: 50%; background: #c8a45d; display: grid; place-items: center; box-shadow: 0 12px 40px rgba(0,0,0,.45); transition: transform .2s ease, background .2s ease; }
+.yt-player .yt-play svg { display: block; transform: translateX(2px); }
+.yt-player .yt-facade:hover .yt-play, .yt-player .yt-facade:focus-visible .yt-play { transform: scale(1.08); background: #d8b870; }
+.yt-player .yt-facade:focus-visible { outline: 3px solid #d8b870; outline-offset: -3px; }
+.yt-player .yt-dur { position: absolute; z-index: 2; bottom: 14px; right: 14px; padding: 3px 9px; border-radius: 6px; background: rgba(7,26,51,.82); color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .02em; direction: ltr; }
+.yt-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.yt-player .yt-nojs { position: absolute; inset: 0; z-index: 3; display: grid; place-items: end center; padding-bottom: 18px; color: #fff; font-weight: 800; }
+@media (max-width: 620px) { .yt-player .yt-play { width: 62px; height: 62px; margin: -31px 0 0 -31px; } }
+@media (prefers-reduced-motion: reduce) { .yt-player .yt-play, .yt-player .yt-facade::before { transition: none; } }
+
+/* Homepage media: link to the full list */
+.media-more { margin: 34px 0 0; text-align: center; }
+.media-more a { display: inline-flex; align-items: center; gap: 10px; padding: 14px 30px; border-radius: 999px; border: 1.5px solid #071a33; color: #071a33; font-weight: 800; font-size: 15px; text-decoration: none; transition: background .2s ease, color .2s ease; }
+.media-more a:hover, .media-more a:focus-visible { background: #071a33; color: #fff; }
